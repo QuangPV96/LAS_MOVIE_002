@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpaceGrotesk-Medium.ttf">
+            <string>SpaceGrotesk-Medium</string>
+        </array>
+        <array key="SpaceGrotesk-Regular.ttf">
+            <string>SpaceGrotesk-Regular</string>
+        </array>
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupSaveView" customModule="VideoEdit" customModuleProvider="target">
+            <connections>
+                <outlet property="lblName" destination="GKR-0n-Ncz" id="7kb-X1-Zhx"/>
+                <outlet property="lblName1" destination="Yab-2D-h8d" id="uYW-Hi-rZd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPP-XA-OZi" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="337" height="203"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yab-2D-h8d">
+                            <rect key="frame" x="120" y="24" width="97.333333333333314" height="23.333333333333329"/>
+                            <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aW-yQ-187" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
+                            <rect key="frame" x="24" y="67.333333333333329" width="289" height="48"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKR-0n-Ncz">
+                                    <rect key="frame" x="0.0" y="0.0" width="289" height="48"/>
+                                    <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="SpaceGrotesk-Regular" family="Space Grotesk" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="GKR-0n-Ncz" firstAttribute="leading" secondItem="3aW-yQ-187" secondAttribute="leading" id="9F1-b2-eS6"/>
+                                <constraint firstAttribute="height" constant="48" id="NaQ-qN-2K4"/>
+                                <constraint firstItem="GKR-0n-Ncz" firstAttribute="top" secondItem="3aW-yQ-187" secondAttribute="top" id="fFQ-R7-eBg"/>
+                                <constraint firstAttribute="trailing" secondItem="GKR-0n-Ncz" secondAttribute="trailing" id="msh-WB-9Y1"/>
+                                <constraint firstAttribute="bottom" secondItem="GKR-0n-Ncz" secondAttribute="bottom" id="vyi-yB-wYm"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="24"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjk-DW-4Ah" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
+                            <rect key="frame" x="237" y="147" width="75" height="32"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-wi-6up">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="32"/>
+                                    <fontDescription key="fontDescription" name="SpaceGrotesk-Medium" family="Space Grotesk" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-Iq-KUK">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="32"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="actionSave:" destination="-1" eventType="touchUpInside" id="efo-W9-pX0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.30588235294117649" green="0.34901960784313724" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="zlk-wi-6up" secondAttribute="bottom" id="0FW-Fc-2hd"/>
+                                <constraint firstAttribute="trailing" secondItem="zlk-wi-6up" secondAttribute="trailing" id="Oyw-cB-ky0"/>
+                                <constraint firstAttribute="bottom" secondItem="ySu-Iq-KUK" secondAttribute="bottom" id="QFs-2H-q6a"/>
+                                <constraint firstItem="ySu-Iq-KUK" firstAttribute="top" secondItem="Fjk-DW-4Ah" secondAttribute="top" id="TfV-2x-Wus"/>
+                                <constraint firstAttribute="height" constant="32" id="XwW-Iw-hqa"/>
+                                <constraint firstItem="zlk-wi-6up" firstAttribute="leading" secondItem="Fjk-DW-4Ah" secondAttribute="leading" id="ejs-lB-fUP"/>
+                                <constraint firstAttribute="width" constant="75" id="iYp-FI-Y7t"/>
+                                <constraint firstItem="zlk-wi-6up" firstAttribute="top" secondItem="Fjk-DW-4Ah" secondAttribute="top" id="lE2-Xg-elZ"/>
+                                <constraint firstItem="ySu-Iq-KUK" firstAttribute="leading" secondItem="Fjk-DW-4Ah" secondAttribute="leading" id="lt3-7O-vn2"/>
+                                <constraint firstAttribute="trailing" secondItem="ySu-Iq-KUK" secondAttribute="trailing" id="r9c-Xw-Nv2"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIM-da-Gs5" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
+                            <rect key="frame" x="146" y="147" width="75" height="32"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-jb-PPA">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="32"/>
+                                    <fontDescription key="fontDescription" name="SpaceGrotesk-Medium" family="Space Grotesk" pointSize="16"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQv-wF-zpC">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="32"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="actionCancel:" destination="-1" eventType="touchUpInside" id="vp5-j7-i1Q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="BBR-jb-PPA" secondAttribute="bottom" id="0nS-ED-4ru"/>
+                                <constraint firstAttribute="trailing" secondItem="sQv-wF-zpC" secondAttribute="trailing" id="1qO-Qx-fEy"/>
+                                <constraint firstItem="BBR-jb-PPA" firstAttribute="top" secondItem="fIM-da-Gs5" secondAttribute="top" id="37h-Vy-mVJ"/>
+                                <constraint firstItem="sQv-wF-zpC" firstAttribute="leading" secondItem="fIM-da-Gs5" secondAttribute="leading" id="Ptc-eB-cJo"/>
+                                <constraint firstAttribute="trailing" secondItem="BBR-jb-PPA" secondAttribute="trailing" id="QI4-pD-iEv"/>
+                                <constraint firstItem="BBR-jb-PPA" firstAttribute="leading" secondItem="fIM-da-Gs5" secondAttribute="leading" id="baL-11-EST"/>
+                                <constraint firstAttribute="height" constant="32" id="prl-2M-5UO"/>
+                                <constraint firstAttribute="width" constant="75" id="uHA-em-gaf"/>
+                                <constraint firstItem="sQv-wF-zpC" firstAttribute="top" secondItem="fIM-da-Gs5" secondAttribute="top" id="udE-jf-2kv"/>
+                                <constraint firstAttribute="bottom" secondItem="sQv-wF-zpC" secondAttribute="bottom" id="zsZ-fi-HkQ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3aW-yQ-187" firstAttribute="leading" secondItem="vPP-XA-OZi" secondAttribute="leading" constant="24" id="8UH-Ks-fje"/>
+                        <constraint firstItem="3aW-yQ-187" firstAttribute="top" secondItem="Yab-2D-h8d" secondAttribute="bottom" constant="20" id="CzX-bl-pTg"/>
+                        <constraint firstAttribute="bottom" secondItem="Fjk-DW-4Ah" secondAttribute="bottom" constant="24" id="I8H-cj-vOb"/>
+                        <constraint firstItem="fIM-da-Gs5" firstAttribute="centerY" secondItem="Fjk-DW-4Ah" secondAttribute="centerY" id="K7n-ZV-Wxh"/>
+                        <constraint firstAttribute="trailing" secondItem="Fjk-DW-4Ah" secondAttribute="trailing" constant="25" id="LGX-J8-9Oa"/>
+                        <constraint firstItem="Fjk-DW-4Ah" firstAttribute="leading" secondItem="fIM-da-Gs5" secondAttribute="trailing" constant="16" id="OIj-hD-7wB"/>
+                        <constraint firstItem="Yab-2D-h8d" firstAttribute="centerX" secondItem="vPP-XA-OZi" secondAttribute="centerX" id="jZk-pV-uhm"/>
+                        <constraint firstItem="Yab-2D-h8d" firstAttribute="top" secondItem="vPP-XA-OZi" secondAttribute="top" constant="24" id="nlH-7C-vrK"/>
+                        <constraint firstAttribute="trailing" secondItem="3aW-yQ-187" secondAttribute="trailing" constant="24" id="yIV-Aa-jmv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vPP-XA-OZi" secondAttribute="bottom" id="11o-sy-Mfb"/>
+                <constraint firstAttribute="trailing" secondItem="vPP-XA-OZi" secondAttribute="trailing" id="ADa-5i-N4F"/>
+                <constraint firstItem="vPP-XA-OZi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YtC-yC-3GO"/>
+                <constraint firstItem="vPP-XA-OZi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xVw-32-rMv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="82.44274809160305" y="-173.94366197183101"/>
+        </view>
+    </objects>
+</document>

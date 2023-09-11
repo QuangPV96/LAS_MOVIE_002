@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FontCell" customModule="VideoEdit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-6S-jOl" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75K-tV-Kvg">
+                                <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90g-hq-Nly">
+                                <rect key="frame" x="0.0" y="0.0" width="52" height="36"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="actionSelect:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1dN-bd-72E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="75K-tV-Kvg" secondAttribute="bottom" id="23d-ih-iI0"/>
+                            <constraint firstAttribute="trailing" secondItem="90g-hq-Nly" secondAttribute="trailing" id="8jJ-Wm-ypT"/>
+                            <constraint firstItem="90g-hq-Nly" firstAttribute="leading" secondItem="4Z2-6S-jOl" secondAttribute="leading" id="C1J-ni-Av5"/>
+                            <constraint firstAttribute="bottom" secondItem="90g-hq-Nly" secondAttribute="bottom" id="Hgm-E6-ycx"/>
+                            <constraint firstAttribute="trailing" secondItem="75K-tV-Kvg" secondAttribute="trailing" id="aps-12-bF6"/>
+                            <constraint firstItem="90g-hq-Nly" firstAttribute="top" secondItem="4Z2-6S-jOl" secondAttribute="top" id="e4u-Nq-HLn"/>
+                            <constraint firstItem="75K-tV-Kvg" firstAttribute="leading" secondItem="4Z2-6S-jOl" secondAttribute="leading" id="xTF-8n-OY4"/>
+                            <constraint firstItem="75K-tV-Kvg" firstAttribute="top" secondItem="4Z2-6S-jOl" secondAttribute="top" id="zco-Ya-cB3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Z2-6S-jOl" secondAttribute="trailing" id="4bV-oM-h2M"/>
+                <constraint firstAttribute="bottom" secondItem="4Z2-6S-jOl" secondAttribute="bottom" id="Iy3-Ay-G4s"/>
+                <constraint firstItem="4Z2-6S-jOl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pde-jp-gGd"/>
+                <constraint firstItem="4Z2-6S-jOl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hEz-EZ-Tzn"/>
+            </constraints>
+            <size key="customSize" width="108" height="96"/>
+            <connections>
+                <outlet property="lblFont" destination="75K-tV-Kvg" id="wKa-vr-8No"/>
+                <outlet property="vParent" destination="4Z2-6S-jOl" id="16r-l0-1AI"/>
+            </connections>
+            <point key="canvasLocation" x="64.122137404580144" y="35.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
