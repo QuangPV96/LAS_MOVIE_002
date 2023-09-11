@@ -87,12 +87,16 @@ class MergeVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
         
     }
     @IBAction func actionMergeVideo(_ sender: Any) {
-        let urls:[URL] = self.listMerges.map { video in
-            return video.videoPath
+        if self.listMerges.count < 2 {
+            DAppMessagesManage.shared.showMessage(messageType: .error, message: "Please select at least 2 videos to use this function!")
+        } else {
+            let urls:[URL] = self.listMerges.map { video in
+                return video.videoPath
+            }
+            showLoading()
+            FFmpegManager.shared.mergeVideoCmd(videos: urls)
+            FFmpegManager.shared.delegate = self
         }
-        showLoading()
-        FFmpegManager.shared.mergeVideoCmd(videos: urls)
-        FFmpegManager.shared.delegate = self
         
     }
     

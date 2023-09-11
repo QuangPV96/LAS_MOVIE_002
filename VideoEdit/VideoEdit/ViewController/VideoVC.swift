@@ -9,8 +9,10 @@ import UIKit
 import BetterSegmentedControl
 import Photos
 import MediaPlayer
+import GoogleMobileAds
 
 class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UITableViewDelegate, UITableViewDataSource  {
+   
     @IBOutlet weak var vPermission: PView!
     @IBOutlet weak var clvVideo: UICollectionView!
     @IBOutlet weak var vFolder: UIView!
@@ -18,9 +20,16 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var vControl: BetterSegmentedControl!
     @IBOutlet weak var vParent: UIView!
     @IBOutlet weak var tbvFolder: UITableView!
+    @IBOutlet weak var viewNativeAds: UIView!
+    
     var listPlayableItem = [PlayableItem]()
     var listVideo: [VideoModel] = []
     var folders: [Folder] = []
+    
+    var adLoader: GADAdLoader!
+    var nativeAdView: NativeSmallAdView!
+    var nativeAd: GADNativeAd?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Control 6: Apple style
@@ -35,12 +44,30 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
         tbvFolder.register(UINib(nibName: "FolderCell", bundle: nil), forCellReuseIdentifier: "FolderCell")
         controlTab()
         permissonCheck()
-        //fetchVideosFromGallery()
+        
+        adLoader = GADAdLoader(adUnitID: admod_small_native, rootViewController: self,
+                               adTypes: [ .native ], options: nil)
+        adLoader!.delegate = self
+        adLoader!.load(GADRequest())
+        
         
     }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .darkContent //.default for black style
     }
+    
+    func setAdView(_ view: NativeSmallAdView) {
+        nativeAdView = view
+        self.viewNativeAds.addSubview(nativeAdView)
+        nativeAdView.translatesAutoresizingMaskIntoConstraints = false
+        let viewDictionary = ["_nativeAdView": nativeAdView!]
+        self.viewNativeAds.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        self.viewNativeAds.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+    }
+    
     func permissonCheck() {
         PHPhotoLibrary.requestAuthorization { (status) in
                  switch status {
@@ -129,21 +156,17 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
                         if let avAsset = avAsset as? AVURLAsset {
                             let videoURL = avAsset.url
                             Constants.getVideoInfo(from: asset, avAsset: avAsset, videoURL: videoURL) { listVideo in
-                                do {
-                                    DispatchQueue.main.async {
-                                        listVideo.forEach { video in
-                                            self.listVideo.append(video)
-                                            videoGallery.append(video)
-                                            let playableItem = PlayableItem.convertToPlayableItem(videoModel: video)
-                                            self.listPlayableItem.append(playableItem)
-                                        }
-                                        dispatchGroup.leave()
+                                DispatchQueue.main.async {
+                                    listVideo.forEach { video in
+                                        self.listVideo.append(video)
+                                        videoGallery.append(video)
+                                        let playableItem = PlayableItem.convertToPlayableItem(videoModel: video)
+                                        self.listPlayableItem.append(playableItem)
                                     }
-                                    
-                                }catch {}
-                                
+                                    dispatchGroup.leave()
+                                }
                             }
-                        }else {
+                        } else {
                             dispatchGroup.leave()
                         }
                         
@@ -164,10 +187,7 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
                 
             }else {
                 self.hideLoading()
-                DAppMessagesManage.shared.showMessage(messageType: .error, message: "You need a permisson to use this feature")
-                self.vPermission.isHidden = false
-
-                print("trungnc 44444")
+                DAppMessagesManage.shared.showMessage(messageType: .error, message: "You don't have video to use this feature")
             }
         }
     func saveVideoToDocumentDirectory(videoURL: URL)-> URL {
@@ -178,10 +198,8 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
             let destinationURL = documentsURL.appendingPathComponent(videoURL.lastPathComponent)
             
             try fileManager.copyItem(at: videoURL, to: destinationURL)
-            print("Video đã được sao chép đến \(destinationURL)")
             return documentsURL
         } catch {
-            print("Lỗi khi sao chép tệp video: \(error)")
         }
         return videoURL
     }
@@ -228,15 +246,11 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
         let videoModel = listVideo[indexPath.row]
         cell.setData(videoModel: videoModel, row: indexPath.row)
         cell.itemSelectBlock = { [self]videoSelect, indexRow in
-            do {
-                let vc = PlayVC()
-                vc.playableItem = listPlayableItem[indexRow]
-                vc.playableList = listPlayableItem
-                vc.startAtIndex = indexRow
-                self.navigationController?.pushViewController(vc, animated: true)
-            } catch {
-                print(error)
-            }
+            let vc = PlayVC()
+            vc.playableItem = listPlayableItem[indexRow]
+            vc.playableList = listPlayableItem
+            vc.startAtIndex = indexRow
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
         return cell
@@ -268,7 +282,25 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
     
     @IBAction func openSetting(_ sender: Any) {
         if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                   UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-               }
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
+    }
+}
+
+extension VideoVC : GADNativeAdLoaderDelegate, GADAdLoaderDelegate {
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+        guard let nibObjects = Bundle.main.loadNibNamed("NativeSmallAdView", owner: nil, options: nil),
+            let adView = nibObjects.first as? NativeSmallAdView else {
+                assert(false, "Could not load nib file for adView")
+                return
+        }
+        
+        setAdView(adView)
+        
+        self.nativeAd = nativeAd
+        nativeAdView.setViewForAds(nativeAd: self.nativeAd!)
     }
 }

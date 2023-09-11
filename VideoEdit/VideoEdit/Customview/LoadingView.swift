@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import Lottie
 class LoadingView: UIView {
-    var animationView: LottieAnimationView = LottieAnimationView(frame: CGRect(x: ActivityEx.screenWidth()/2, y: ActivityEx.screenWidth()/2, width: 40, height: 40))
+    
+    var animationView: LottieAnimationView = LottieAnimationView(name: "anim_loading")
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,6 +21,7 @@ class LoadingView: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
+    
     private func commonInit() {
         let nib = UINib(nibName: "LoadingView", bundle: nil)
         if let view = nib.instantiate(withOwner: self, options: nil).first as? UIView {
@@ -30,24 +32,9 @@ class LoadingView: UIView {
         }
     }
     private func settingAnimation(view: UIView) {
-        // 2. Start LottieAnimationView with animation name (without extension)
-          
-          animationView = .init(name: "loading")
-          
-          animationView.frame = view.bounds
-          
-          // 3. Set animation content mode
-          
+          animationView.frame = CGRect(x: ActivityEx.screenWidth()/2 - 75, y: ActivityEx.screenHeight()/2 - 75, width: 150, height: 150)
           animationView.contentMode = .scaleAspectFit
-          
-          // 4. Set animation loop mode
-          
           animationView.loopMode = .loop
-          
-          // 5. Adjust animation speed
-          
-          animationView.animationSpeed = 0.5
-          
           view.addSubview(animationView)
     }
 }

@@ -12,20 +12,24 @@ class MyFilesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var vEmpty: UIView!
     @IBOutlet weak var tbVideo: UITableView!
-   private var listVideo: [VideoModel] = []
+    private var listVideo: [VideoModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tbVideo.register(UINib(nibName: "MyFileCell", bundle: nil), forCellReuseIdentifier: "MyFileCell")
         tbVideo.delegate = self
         tbVideo.dataSource = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadData()
     }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .darkContent //.default for black style
+        return .darkContent
     }
+    
     func reloadData() {
         listVideo.removeAll()
         let listSave = PlayableItem.readFromFileEditJson()
@@ -87,7 +91,4 @@ class MyFilesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let vc = MergeVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
- 
-
 }

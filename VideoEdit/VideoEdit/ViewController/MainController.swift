@@ -7,13 +7,15 @@
 
 import UIKit
 
-class MainController: UITabBarController , UITabBarControllerDelegate {
+class MainController: UITabBarController, UITabBarControllerDelegate {
+    
     let unSelectColor = 0x999BB0
     let selectColor = 0x655BE8
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Tạo một UIImageView và đặt hình ảnh nền cho nó
@@ -26,17 +28,19 @@ class MainController: UITabBarController , UITabBarControllerDelegate {
         navigationController?.setNavigationBarHidden(true, animated: animated)
        
     }
+    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         return true
     }
+    
     private func setColorTabar(item: UITabBarItem){
         let normalTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x999BB0)]
         let selectedTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x655BE8)]
         item.setTitleTextAttributes(normalTextAttributes, for: .normal)
         item.setTitleTextAttributes(selectedTextAttributes, for: .selected)
     }
+    
     private func resizeImage(name: String, color: UIColor, width: Int, height: Int) -> UIImage {
-        // Tạo một UIImage với kích thước mới
         let originalImage = UIImage(named: name)
         let resizedImage = originalImage?.resized(to: CGSize(width: width, height: height))
         if #available(iOS 13.0, *) {
@@ -73,7 +77,6 @@ class MainController: UITabBarController , UITabBarControllerDelegate {
         if #available(iOS 15.0, *) {
             tabBar.scrollEdgeAppearance = tabBar.standardAppearance
         } else {
-            // Fallback on earlier versions
         }
     }
 

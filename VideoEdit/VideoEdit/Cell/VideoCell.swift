@@ -31,13 +31,10 @@ class VideoCell: UICollectionViewCell {
     func setData(videoModel: VideoModel, row: Int) {
         self.videoModel = videoModel
         self.indexSelect = row
-        do {
-            ivThumb.image = (videoModel.thumbnail != nil) ? videoModel.thumbnail : UIImage(named: "ic_thumb_fake")
-            lblDuration.text = Constants.format(duration: videoModel.videoDuration)
-            lblName.text = videoModel.videoName
-            ivSelect.isHidden = videoModel.isNotSelect
-        }catch {}
-        
+        ivThumb.image = videoModel.thumbnail
+        lblDuration.text = Constants.format(duration: videoModel.videoDuration)
+        lblName.text = videoModel.videoName
+        ivSelect.isHidden = videoModel.isNotSelect
     }
    
 

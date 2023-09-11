@@ -22,11 +22,6 @@
 		1027EED32A80D5F300C55DEB /* MyFilesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1027EED12A80D5F300C55DEB /* MyFilesVC.xib */; };
 		1027EED62A80D60200C55DEB /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027EED42A80D60200C55DEB /* SettingVC.swift */; };
 		1027EED72A80D60200C55DEB /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1027EED52A80D60200C55DEB /* SettingVC.xib */; };
-		1894D5842AA4E6EF0008FBE4 /* TrimVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D5822AA4E6EE0008FBE4 /* TrimVC.swift */; };
-		1894D5852AA4E6EF0008FBE4 /* TrimVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894D5832AA4E6EE0008FBE4 /* TrimVC.xib */; };
-		1894D5872AA4E84E0008FBE4 /* VideoTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D5862AA4E84E0008FBE4 /* VideoTrimmer.swift */; };
-		1894D5892AA4E8DA0008FBE4 /* OptiVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D5882AA4E8DA0008FBE4 /* OptiVideoEditor.swift */; };
-		1894D58B2AA4EA4E0008FBE4 /* VideoTrimmerThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894D58A2AA4EA4E0008FBE4 /* VideoTrimmerThumb.swift */; };
 		18BB18232A81DA6F00D4E83C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BB181F2A81DA6F00D4E83C /* Poppins-Regular.ttf */; };
 		18BB18242A81DA6F00D4E83C /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BB18202A81DA6F00D4E83C /* Poppins-Medium.ttf */; };
 		18BB18252A81DA6F00D4E83C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BB18212A81DA6F00D4E83C /* Poppins-SemiBold.ttf */; };
@@ -69,7 +64,6 @@
 		18FDCC832A89404600C1777B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCC822A89404600C1777B /* BaseViewController.swift */; };
 		18FDCC862A89409F00C1777B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FDCC842A89409F00C1777B /* LoadingView.swift */; };
 		18FDCC872A89409F00C1777B /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FDCC852A89409F00C1777B /* LoadingView.xib */; };
-		18FDCC892A8940C200C1777B /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 18FDCC882A8940C200C1777B /* loading.json */; };
 		18FFDC682A832991007CA415 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFDC672A832991007CA415 /* AudioManager.swift */; };
 		18FFDC702A8329CD007CA415 /* AudioManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFDC6A2A8329CD007CA415 /* AudioManage.swift */; };
 		18FFDC712A8329CD007CA415 /* MPNowPlayingInfoCenter+AudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFDC6B2A8329CD007CA415 /* MPNowPlayingInfoCenter+AudioItem.swift */; };
@@ -78,6 +72,19 @@
 		18FFDC742A8329CD007CA415 /* PlayableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFDC6E2A8329CD007CA415 /* PlayableItem.swift */; };
 		18FFDC752A8329CD007CA415 /* AudioPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FFDC6F2A8329CD007CA415 /* AudioPlayerState.swift */; };
 		66FC45A432C148F92D1DF8AA /* Pods_VideoEdit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9D53F12FB17BA01978EB7F /* Pods_VideoEdit.framework */; };
+		74098C9C2AAF51FF00263474 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74098C9A2AAF51FF00263474 /* SplashVC.swift */; };
+		74098C9D2AAF51FF00263474 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74098C9B2AAF51FF00263474 /* SplashVC.xib */; };
+		74098CA02AAF53C100263474 /* anim_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 74098C9F2AAF53C100263474 /* anim_loading.json */; };
+		74098CA32AAF58C200263474 /* NativeSmallAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74098CA12AAF58C200263474 /* NativeSmallAdView.xib */; };
+		74098CA42AAF58C200263474 /* NativeSmallAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74098CA22AAF58C200263474 /* NativeSmallAdView.swift */; };
+		7495D0D42AAF4F9F0095A7DF /* AdmodOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D0D12AAF4F9F0095A7DF /* AdmodOpen.swift */; };
+		7495D0D62AAF4F9F0095A7DF /* AdmodSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D0D32AAF4F9F0095A7DF /* AdmodSplash.swift */; };
+		8FB49E4D2AA771A500F9D543 /* VideoTrimmerThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4B2AA771A500F9D543 /* VideoTrimmerThumb.swift */; };
+		8FB49E4E2AA771A500F9D543 /* VideoTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4C2AA771A500F9D543 /* VideoTrimmer.swift */; };
+		8FB49E502AA771B700F9D543 /* OptiVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4F2AA771B700F9D543 /* OptiVideoEditor.swift */; };
+		8FB49E532AA771C300F9D543 /* TrimVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E512AA771C300F9D543 /* TrimVC.swift */; };
+		8FB49E542AA771C300F9D543 /* TrimVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB49E522AA771C300F9D543 /* TrimVC.xib */; };
+		8FF10AC72A98390C00D5F913 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF10AC62A98390C00D5F913 /* EmailService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,11 +105,6 @@
 		1027EED12A80D5F300C55DEB /* MyFilesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFilesVC.xib; sourceTree = "<group>"; };
 		1027EED42A80D60200C55DEB /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		1027EED52A80D60200C55DEB /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
-		1894D5822AA4E6EE0008FBE4 /* TrimVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimVC.swift; sourceTree = "<group>"; };
-		1894D5832AA4E6EE0008FBE4 /* TrimVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrimVC.xib; sourceTree = "<group>"; };
-		1894D5862AA4E84E0008FBE4 /* VideoTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmer.swift; sourceTree = "<group>"; };
-		1894D5882AA4E8DA0008FBE4 /* OptiVideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptiVideoEditor.swift; sourceTree = "<group>"; };
-		1894D58A2AA4EA4E0008FBE4 /* VideoTrimmerThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmerThumb.swift; sourceTree = "<group>"; };
 		18BB181F2A81DA6F00D4E83C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		18BB18202A81DA6F00D4E83C /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		18BB18212A81DA6F00D4E83C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -145,7 +147,6 @@
 		18FDCC822A89404600C1777B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18FDCC842A89409F00C1777B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		18FDCC852A89409F00C1777B /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		18FDCC882A8940C200C1777B /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		18FFDC672A832991007CA415 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		18FFDC6A2A8329CD007CA415 /* AudioManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManage.swift; sourceTree = "<group>"; };
 		18FFDC6B2A8329CD007CA415 /* MPNowPlayingInfoCenter+AudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MPNowPlayingInfoCenter+AudioItem.swift"; sourceTree = "<group>"; };
@@ -155,6 +156,19 @@
 		18FFDC6F2A8329CD007CA415 /* AudioPlayerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerState.swift; sourceTree = "<group>"; };
 		45D98EB12079221E9EBC43E2 /* Pods-VideoEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoEdit.debug.xcconfig"; path = "Target Support Files/Pods-VideoEdit/Pods-VideoEdit.debug.xcconfig"; sourceTree = "<group>"; };
 		6F9D53F12FB17BA01978EB7F /* Pods_VideoEdit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoEdit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74098C9A2AAF51FF00263474 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		74098C9B2AAF51FF00263474 /* SplashVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		74098C9F2AAF53C100263474 /* anim_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anim_loading.json; sourceTree = "<group>"; };
+		74098CA12AAF58C200263474 /* NativeSmallAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeSmallAdView.xib; sourceTree = "<group>"; };
+		74098CA22AAF58C200263474 /* NativeSmallAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeSmallAdView.swift; sourceTree = "<group>"; };
+		7495D0D12AAF4F9F0095A7DF /* AdmodOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmodOpen.swift; sourceTree = "<group>"; };
+		7495D0D32AAF4F9F0095A7DF /* AdmodSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmodSplash.swift; sourceTree = "<group>"; };
+		8FB49E4B2AA771A500F9D543 /* VideoTrimmerThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmerThumb.swift; sourceTree = "<group>"; };
+		8FB49E4C2AA771A500F9D543 /* VideoTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmer.swift; sourceTree = "<group>"; };
+		8FB49E4F2AA771B700F9D543 /* OptiVideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptiVideoEditor.swift; sourceTree = "<group>"; };
+		8FB49E512AA771C300F9D543 /* TrimVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimVC.swift; sourceTree = "<group>"; };
+		8FB49E522AA771C300F9D543 /* TrimVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrimVC.xib; sourceTree = "<group>"; };
+		8FF10AC62A98390C00D5F913 /* EmailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		C8698E9AA18B9DD22226C356 /* Pods-VideoEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoEdit.release.xcconfig"; path = "Target Support Files/Pods-VideoEdit/Pods-VideoEdit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +205,8 @@
 		1027EEAA2A80C96700C55DEB /* VideoEdit */ = {
 			isa = PBXGroup;
 			children = (
-				18FDCC882A8940C200C1777B /* loading.json */,
+				74098C9E2AAF53C100263474 /* Resource */,
+				7495D0D02AAF4F9F0095A7DF /* Ads */,
 				18BB183E2A827FEE00D4E83C /* Service */,
 				18BB182D2A81F8F700D4E83C /* Cell */,
 				18BB182A2A81F34D00D4E83C /* Model */,
@@ -211,8 +226,8 @@
 		1027EEBF2A80CED700C55DEB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1894D5822AA4E6EE0008FBE4 /* TrimVC.swift */,
-				1894D5832AA4E6EE0008FBE4 /* TrimVC.xib */,
+				8FB49E512AA771C300F9D543 /* TrimVC.swift */,
+				8FB49E522AA771C300F9D543 /* TrimVC.xib */,
 				18F126062A8BB02C00186B91 /* BoxVC.swift */,
 				18F126052A8BB02C00186B91 /* BoxVC.xib */,
 				1027EEC02A80CF1100C55DEB /* MainController.swift */,
@@ -232,6 +247,8 @@
 				18FDCC7E2A893BD200C1777B /* VideoDetailVC.swift */,
 				18FDCC7F2A893BD200C1777B /* VideoDetailVC.xib */,
 				18FDCC822A89404600C1777B /* BaseViewController.swift */,
+				74098C9A2AAF51FF00263474 /* SplashVC.swift */,
+				74098C9B2AAF51FF00263474 /* SplashVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -274,8 +291,10 @@
 		18BB18272A81DC5500D4E83C /* Customview */ = {
 			isa = PBXGroup;
 			children = (
-				1894D58A2AA4EA4E0008FBE4 /* VideoTrimmerThumb.swift */,
-				1894D5862AA4E84E0008FBE4 /* VideoTrimmer.swift */,
+				74098CA22AAF58C200263474 /* NativeSmallAdView.swift */,
+				74098CA12AAF58C200263474 /* NativeSmallAdView.xib */,
+				8FB49E4C2AA771A500F9D543 /* VideoTrimmer.swift */,
+				8FB49E4B2AA771A500F9D543 /* VideoTrimmerThumb.swift */,
 				18E79B992A8BF67A0090F141 /* PopupSaveView.swift */,
 				18E79B9A2A8BF67A0090F141 /* PopupSaveView.xib */,
 				18F1260F2A8BB28500186B91 /* PImageView.swift */,
@@ -317,6 +336,7 @@
 		18BB183E2A827FEE00D4E83C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8FF10AC62A98390C00D5F913 /* EmailService.swift */,
 				18F1260D2A8BB0B200186B91 /* BoxService.swift */,
 				18FFDC692A8329CC007CA415 /* Audio */,
 				18BB183F2A82800500D4E83C /* DAppMessagesManage.swift */,
@@ -327,7 +347,7 @@
 		18FFDC692A8329CC007CA415 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				1894D5882AA4E8DA0008FBE4 /* OptiVideoEditor.swift */,
+				8FB49E4F2AA771B700F9D543 /* OptiVideoEditor.swift */,
 				18FFDC6A2A8329CD007CA415 /* AudioManage.swift */,
 				18FFDC6B2A8329CD007CA415 /* MPNowPlayingInfoCenter+AudioItem.swift */,
 				18FFDC6C2A8329CD007CA415 /* AudioPlayerDelegate.swift */,
@@ -344,6 +364,23 @@
 				6F9D53F12FB17BA01978EB7F /* Pods_VideoEdit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74098C9E2AAF53C100263474 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				74098C9F2AAF53C100263474 /* anim_loading.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7495D0D02AAF4F9F0095A7DF /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				7495D0D12AAF4F9F0095A7DF /* AdmodOpen.swift */,
+				7495D0D32AAF4F9F0095A7DF /* AdmodSplash.swift */,
+			);
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		E3394BB7936F1F6ED3EECB78 /* Pods */ = {
@@ -367,6 +404,7 @@
 				1027EEA52A80C96700C55DEB /* Frameworks */,
 				1027EEA62A80C96700C55DEB /* Resources */,
 				F1A3EC1F4DA1CF30966CB6A8 /* [CP] Embed Pods Frameworks */,
+				55F688E9A7A0452841B7108A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,13 +457,14 @@
 				1027EECF2A80D5DF00C55DEB /* VideoVC.xib in Resources */,
 				1027EED32A80D5F300C55DEB /* MyFilesVC.xib in Resources */,
 				18BE2A4C2A87E4A100B7660F /* BebasNeue-Regular.ttf in Resources */,
-				1894D5852AA4E6EF0008FBE4 /* TrimVC.xib in Resources */,
+				74098CA32AAF58C200263474 /* NativeSmallAdView.xib in Resources */,
+				8FB49E542AA771C300F9D543 /* TrimVC.xib in Resources */,
 				18BB18312A81F92500D4E83C /* VideoCell.xib in Resources */,
+				74098CA02AAF53C100263474 /* anim_loading.json in Resources */,
 				18FDCC7D2A8929C400C1777B /* FolderCell.xib in Resources */,
 				18BB18232A81DA6F00D4E83C /* Poppins-Regular.ttf in Resources */,
 				18FDCC812A893BD200C1777B /* VideoDetailVC.xib in Resources */,
 				18BE2A4A2A87E4A100B7660F /* Chillax-Medium.otf in Resources */,
-				18FDCC892A8940C200C1777B /* loading.json in Resources */,
 				18FDCC872A89409F00C1777B /* LoadingView.xib in Resources */,
 				18BE2A552A87E81200B7660F /* FontCell.xib in Resources */,
 				18F1260B2A8BB04F00186B91 /* FileCell.xib in Resources */,
@@ -442,6 +481,7 @@
 				18BB18262A81DA6F00D4E83C /* Poppins-Bold.ttf in Resources */,
 				18BE2A452A87E32500B7660F /* ColorCell.xib in Resources */,
 				1027EEC32A80CF1100C55DEB /* MainController.xib in Resources */,
+				74098C9D2AAF51FF00263474 /* SplashVC.xib in Resources */,
 				18F126072A8BB02C00186B91 /* BoxVC.xib in Resources */,
 				1027EED72A80D60200C55DEB /* SettingVC.xib in Resources */,
 			);
@@ -450,6 +490,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		55F688E9A7A0452841B7108A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoEdit/Pods-VideoEdit-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoEdit/Pods-VideoEdit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoEdit/Pods-VideoEdit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DD8C5F77B57A78179F18CCF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,9 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB49E532AA771C300F9D543 /* TrimVC.swift in Sources */,
 				18FDCC802A893BD200C1777B /* VideoDetailVC.swift in Sources */,
 				18FFDC752A8329CD007CA415 /* AudioPlayerState.swift in Sources */,
 				1027EEAC2A80C96700C55DEB /* AppDelegate.swift in Sources */,
+				74098C9C2AAF51FF00263474 /* SplashVC.swift in Sources */,
 				18BB18292A81DC8800D4E83C /* PView.swift in Sources */,
 				18FFDC682A832991007CA415 /* AudioManager.swift in Sources */,
 				18FDCC832A89404600C1777B /* BaseViewController.swift in Sources */,
@@ -507,21 +566,25 @@
 				18F126082A8BB02C00186B91 /* BoxVC.swift in Sources */,
 				18F1260C2A8BB04F00186B91 /* FileCell.swift in Sources */,
 				18BB18342A822BA500D4E83C /* MyFileCell.swift in Sources */,
+				7495D0D42AAF4F9F0095A7DF /* AdmodOpen.swift in Sources */,
 				1027EEAE2A80C96700C55DEB /* SceneDelegate.swift in Sources */,
+				8FF10AC72A98390C00D5F913 /* EmailService.swift in Sources */,
 				18BB184B2A829D5900D4E83C /* PlayVC.swift in Sources */,
 				18BB18302A81F92500D4E83C /* VideoCell.swift in Sources */,
 				1027EEC82A80D52900C55DEB /* Extension.swift in Sources */,
 				18F1260E2A8BB0B200186B91 /* BoxService.swift in Sources */,
 				18BE2A442A87E32500B7660F /* ColorCell.swift in Sources */,
 				18BB18402A82800500D4E83C /* DAppMessagesManage.swift in Sources */,
-				1894D5842AA4E6EF0008FBE4 /* TrimVC.swift in Sources */,
 				18FFDC712A8329CD007CA415 /* MPNowPlayingInfoCenter+AudioItem.swift in Sources */,
+				8FB49E4E2AA771A500F9D543 /* VideoTrimmer.swift in Sources */,
 				18E79B9B2A8BF67A0090F141 /* PopupSaveView.swift in Sources */,
-				1894D58B2AA4EA4E0008FBE4 /* VideoTrimmerThumb.swift in Sources */,
 				18FFDC742A8329CD007CA415 /* PlayableItem.swift in Sources */,
 				18FDCC7C2A8929C400C1777B /* FolderCell.swift in Sources */,
+				8FB49E502AA771B700F9D543 /* OptiVideoEditor.swift in Sources */,
 				18FFDC722A8329CD007CA415 /* AudioPlayerDelegate.swift in Sources */,
+				8FB49E4D2AA771A500F9D543 /* VideoTrimmerThumb.swift in Sources */,
 				18FFDC732A8329CD007CA415 /* CachingPlayerItem.swift in Sources */,
+				7495D0D62AAF4F9F0095A7DF /* AdmodSplash.swift in Sources */,
 				1027EED22A80D5F300C55DEB /* MyFilesVC.swift in Sources */,
 				18CA439B2A8404620075CE03 /* WaterMarkVC.swift in Sources */,
 				18BB18382A8236A900D4E83C /* MergeVC.swift in Sources */,
@@ -531,10 +594,9 @@
 				18C64A982A8A82D800DCE524 /* ffmpegManager.swift in Sources */,
 				1027EEC92A80D52900C55DEB /* ActivityEx.swift in Sources */,
 				1027EECB2A80D55000C55DEB /* Constants.swift in Sources */,
-				1894D5892AA4E8DA0008FBE4 /* OptiVideoEditor.swift in Sources */,
+				74098CA42AAF58C200263474 /* NativeSmallAdView.swift in Sources */,
 				18F126102A8BB28500186B91 /* PImageView.swift in Sources */,
 				18FDCC862A89409F00C1777B /* LoadingView.swift in Sources */,
-				1894D5872AA4E84E0008FBE4 /* VideoTrimmer.swift in Sources */,
 				18BB182C2A81F37E00D4E83C /* VideoModel.swift in Sources */,
 				18F126122A8BB4C400186B91 /* Folder.swift in Sources */,
 			);
@@ -675,11 +737,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = W68PTUZQF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoEdit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kapcat;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Access to get video for you to use the app";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library Access to get video for you to use the app";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -690,7 +756,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.video.edit.VideoEdit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -705,11 +771,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = W68PTUZQF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoEdit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kapcat;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Access to get video for you to use the app";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library Access to get video for you to use the app";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -720,7 +790,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.video.edit.VideoEdit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

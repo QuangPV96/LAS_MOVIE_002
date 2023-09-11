@@ -113,13 +113,13 @@ class FFmpegManager:NSObject,ExecuteDelegate, StatisticsDelegate, LogDelegate{
             } catch {
             }
             DispatchQueue.main.async {
-                DAppMessagesManage.shared.showMessage(messageType: .success, message: "Export audio success!")
+                DAppMessagesManage.shared.showMessage(messageType: .success, message: "Progress audio success!")
             }
             delegate.finish()
 
         } else {
             DispatchQueue.main.async {
-                DAppMessagesManage.shared.showMessage(messageType: .error, message: "Export audio error!")
+                DAppMessagesManage.shared.showMessage(messageType: .error, message: "Progress audio error!")
             }
             delegate.error()
         }
