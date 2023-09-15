@@ -45,7 +45,7 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
         controlTab()
         permissonCheck()
         
-        adLoader = GADAdLoader(adUnitID: admod_small_native, rootViewController: self,
+        adLoader = GADAdLoader(adUnitID: DataCommonModel.shared.admob_small_native, rootViewController: self,
                                adTypes: [ .native ], options: nil)
         adLoader!.delegate = self
         adLoader!.load(GADRequest())

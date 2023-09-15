@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieActorCell" customModule="QP004" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noteable Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q53-gn-NPw">
+                        <rect key="frame" x="16" y="8" width="115" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="KcE-Cj-l4D"/>
+                            <constraint firstAttribute="width" constant="115" id="x9P-gc-BRv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                        <color key="textColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-8e-sN4">
+                        <rect key="frame" x="275" y="8" width="67" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="Twg-7k-RLn"/>
+                            <constraint firstAttribute="width" constant="67" id="aOf-Hi-4df"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="See more">
+                            <color key="titleColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.34509803919999998" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="seeAllHandle:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eiw-g6-tFs"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xhf-3G-qcE">
+                        <rect key="frame" x="16" y="40" width="326" height="140"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Ec-CJ-oaf">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zfu-8e-sN4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="7PV-fp-y7G"/>
+                <constraint firstItem="Q53-gn-NPw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Ddy-vg-DsN"/>
+                <constraint firstAttribute="trailing" secondItem="zfu-8e-sN4" secondAttribute="trailing" constant="16" id="Nz3-dG-Y6Z"/>
+                <constraint firstAttribute="trailing" secondItem="xhf-3G-qcE" secondAttribute="trailing" constant="16" id="SM8-AB-G0N"/>
+                <constraint firstAttribute="bottom" secondItem="xhf-3G-qcE" secondAttribute="bottom" constant="20" id="ebY-lN-W2B"/>
+                <constraint firstItem="xhf-3G-qcE" firstAttribute="top" secondItem="Q53-gn-NPw" secondAttribute="bottom" id="ilO-eJ-Mti"/>
+                <constraint firstItem="xhf-3G-qcE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ocx-vD-SU3"/>
+                <constraint firstItem="Q53-gn-NPw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="sKa-1J-vYS"/>
+            </constraints>
+            <size key="customSize" width="358" height="200"/>
+            <connections>
+                <outlet property="actorsCollectionView" destination="xhf-3G-qcE" id="wTp-Se-wBO"/>
+            </connections>
+            <point key="canvasLocation" x="360.86956521739131" y="127.90178571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

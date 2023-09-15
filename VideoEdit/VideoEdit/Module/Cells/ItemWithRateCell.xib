@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemWithRateCell" id="gTV-IL-0wX" customClass="ItemWithRateCell" customModule="QP004" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="97" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="97" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92I-Wv-seY">
+                        <rect key="frame" x="0.0" y="0.0" width="97" height="117"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-5J-Meq" customClass="PView" customModule="QP004" customModuleProvider="target">
+                        <rect key="frame" x="61" y="8" width="28" height="28"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_star" translatesAutoresizingMaskIntoConstraints="NO" id="Bo7-PP-2yJ">
+                                <rect key="frame" x="9.5" y="17" width="9" height="9"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" id="HDp-g3-ttl"/>
+                                    <constraint firstAttribute="width" constant="9" id="KUM-8o-9ff"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE0-o2-MnF">
+                                <rect key="frame" x="0.0" y="4" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fE0-o2-MnF" firstAttribute="top" secondItem="0cc-5J-Meq" secondAttribute="top" constant="4" id="Ani-Pz-yCb"/>
+                            <constraint firstAttribute="bottom" secondItem="Bo7-PP-2yJ" secondAttribute="bottom" constant="2" id="Hf4-XE-44m"/>
+                            <constraint firstItem="fE0-o2-MnF" firstAttribute="leading" secondItem="0cc-5J-Meq" secondAttribute="leading" id="gnI-lT-Kj5"/>
+                            <constraint firstItem="Bo7-PP-2yJ" firstAttribute="top" secondItem="fE0-o2-MnF" secondAttribute="bottom" id="laB-br-lvU"/>
+                            <constraint firstItem="Bo7-PP-2yJ" firstAttribute="centerX" secondItem="0cc-5J-Meq" secondAttribute="centerX" id="mjh-LQ-lPw"/>
+                            <constraint firstAttribute="trailing" secondItem="fE0-o2-MnF" secondAttribute="trailing" id="qOf-bY-jPu"/>
+                            <constraint firstAttribute="width" constant="28" id="ra1-rt-5ht"/>
+                            <constraint firstAttribute="height" constant="28" id="wF0-wI-Oxb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="92I-Wv-seY" secondAttribute="trailing" id="7JD-v7-lZ4"/>
+                <constraint firstItem="92I-Wv-seY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="K08-pl-hKd"/>
+                <constraint firstAttribute="bottom" secondItem="92I-Wv-seY" secondAttribute="bottom" id="SbT-EK-Fg9"/>
+                <constraint firstItem="92I-Wv-seY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TQV-uL-6E6"/>
+                <constraint firstItem="0cc-5J-Meq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="rIB-jL-Xmj"/>
+                <constraint firstAttribute="trailing" secondItem="0cc-5J-Meq" secondAttribute="trailing" constant="8" id="zDo-zh-iUn"/>
+            </constraints>
+            <size key="customSize" width="97" height="117"/>
+            <connections>
+                <outlet property="lbVote" destination="fE0-o2-MnF" id="T1m-O2-4ry"/>
+                <outlet property="posterImage" destination="92I-Wv-seY" id="P0f-gx-oYl"/>
+            </connections>
+            <point key="canvasLocation" x="171.73913043478262" y="33.147321428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_star" width="11" height="10.333333015441895"/>
+    </resources>
+</document>

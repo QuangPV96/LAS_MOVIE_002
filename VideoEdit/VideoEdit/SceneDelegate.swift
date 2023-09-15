@@ -29,8 +29,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if rootViewController is SplashVC {
             return
         }
-        AdmodOpen.shared.tryToPresentAd()
         
+        if rootViewController is PlayTrailerVC {
+            return
+        }
+        
+        if !AdmobOpenHandle.shared.tryToPresent() {
+            ApplovinOpenHandle.shared.tryToPresent()
+        }
     }
 
     private func topViewControllerWithRootViewController(rootViewController: UIViewController!) -> UIViewController? {

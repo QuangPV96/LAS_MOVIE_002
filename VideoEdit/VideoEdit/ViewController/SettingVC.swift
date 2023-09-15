@@ -18,7 +18,7 @@ class SettingVC: UIViewController {
     }
     @IBAction func actionShare(_ sender: Any) {
         let linkapp = "itms-apps://itunes.apple.com/app/6462407114"
-        let noteStr = "Cam Translate";
+        let noteStr = "Kapcat";
         let url = URL(string: linkapp)!
         let textToShare = [url,noteStr] as [Any]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)

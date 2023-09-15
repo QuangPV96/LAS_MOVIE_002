@@ -12,7 +12,11 @@ pod 'mobile-ffmpeg-full-gpl', '~> 4.2'
 pod 'lottie-ios'
 pod 'BoxSDK'
 
-pod 'Google-Mobile-Ads-SDK'
+pod 'SDWebImage'
+pod 'SwiftSoup'
+pod 'CryptoSwift'
+pod 'Zip'
+pod 'RealmSwift'
 
 pod 'AppLovinSDK'
 pod 'AppLovinMediationAdColonyAdapter'

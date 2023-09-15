@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V8k-lo-hdd" customClass="CastActionItemCell" customModule="QP004" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V8k-lo-hdd" id="e2A-NP-b1F">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-R3-XcB">
+                        <rect key="frame" x="15" y="10" width="30" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Siy-vY-gm4"/>
+                            <constraint firstAttribute="width" constant="30" id="Yg5-gV-4PH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="0.19215686274509802" green="0.21568627450980393" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardians of the Galaxy Vol. 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO6-zK-Dly">
+                        <rect key="frame" x="88" y="10" width="277" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Ltb-Oe-03o"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="0.19215686269999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-Kl-oGr">
+                        <rect key="frame" x="60" y="16" width="8" height="8"/>
+                        <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="I34-5v-k3x"/>
+                            <constraint firstAttribute="height" constant="8" id="Uhi-px-Kcm"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRQ-LS-Ufj">
+                        <rect key="frame" x="63.5" y="16" width="1.5" height="64"/>
+                        <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1.5" id="Bu0-5U-E5Y"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="as Drax the Destroyer" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6x-fM-wn9">
+                        <rect key="frame" x="88" y="30" width="277" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="YYC-dg-tiL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="0.19215686269999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nRk-Kl-oGr" firstAttribute="centerY" secondItem="BMz-R3-XcB" secondAttribute="centerY" id="2go-bJ-6Fd"/>
+                    <constraint firstAttribute="trailing" secondItem="NO6-zK-Dly" secondAttribute="trailing" constant="10" id="7Z9-GE-huj"/>
+                    <constraint firstItem="d6x-fM-wn9" firstAttribute="leading" secondItem="NO6-zK-Dly" secondAttribute="leading" id="AZP-82-2Lp"/>
+                    <constraint firstItem="BMz-R3-XcB" firstAttribute="leading" secondItem="e2A-NP-b1F" secondAttribute="leading" constant="15" id="DbX-mU-3uz"/>
+                    <constraint firstItem="oRQ-LS-Ufj" firstAttribute="centerX" secondItem="nRk-Kl-oGr" secondAttribute="centerX" id="LHm-78-ddd"/>
+                    <constraint firstItem="NO6-zK-Dly" firstAttribute="centerY" secondItem="BMz-R3-XcB" secondAttribute="centerY" id="MvI-Bd-3zn"/>
+                    <constraint firstItem="d6x-fM-wn9" firstAttribute="trailing" secondItem="NO6-zK-Dly" secondAttribute="trailing" id="Owx-Dm-aHf"/>
+                    <constraint firstItem="NO6-zK-Dly" firstAttribute="leading" secondItem="nRk-Kl-oGr" secondAttribute="trailing" constant="20" id="QmB-24-6ut"/>
+                    <constraint firstItem="oRQ-LS-Ufj" firstAttribute="top" secondItem="e2A-NP-b1F" secondAttribute="top" constant="16" id="c0c-9G-Z3N"/>
+                    <constraint firstAttribute="bottom" secondItem="oRQ-LS-Ufj" secondAttribute="bottom" id="hnN-P4-cfq"/>
+                    <constraint firstItem="BMz-R3-XcB" firstAttribute="top" secondItem="e2A-NP-b1F" secondAttribute="top" constant="10" id="nFP-r3-kuS"/>
+                    <constraint firstItem="nRk-Kl-oGr" firstAttribute="leading" secondItem="BMz-R3-XcB" secondAttribute="trailing" constant="15" id="pGU-Wg-gih"/>
+                    <constraint firstItem="d6x-fM-wn9" firstAttribute="top" secondItem="NO6-zK-Dly" secondAttribute="bottom" id="t9j-11-GXU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KI9-6c-Ah6"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="characterLabel" destination="d6x-fM-wn9" id="e6z-mi-qes"/>
+                <outlet property="conBottomLineVerticalView" destination="hnN-P4-cfq" id="DSB-QQ-bLu"/>
+                <outlet property="conTopLineVerticalView" destination="c0c-9G-Z3N" id="jM6-Ne-fE5"/>
+                <outlet property="dotView" destination="nRk-Kl-oGr" id="NdM-su-I0Q"/>
+                <outlet property="lineVerticalView" destination="oRQ-LS-Ufj" id="rjz-et-aYg"/>
+                <outlet property="titleLabel" destination="NO6-zK-Dly" id="Rwe-j9-muO"/>
+                <outlet property="yearLabel" destination="BMz-R3-XcB" id="dlR-vb-eG3"/>
+            </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="85.714285714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

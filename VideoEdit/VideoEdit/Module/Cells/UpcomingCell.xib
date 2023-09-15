@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UpcomingCell" id="mqt-S3-Xju" customClass="UpcomingCell" customModule="Movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="149"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="149"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Shows Airing Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5c-gl-L8y">
+                        <rect key="frame" x="16" y="8" width="161" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="gNc-v7-oKa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                        <color key="textColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wn6-gY-azi">
+                        <rect key="frame" x="224" y="8" width="67" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="67" id="KxD-F1-GjL"/>
+                            <constraint firstAttribute="height" constant="32" id="R9J-8b-n0W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="See more">
+                            <color key="titleColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.34509803919999998" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="seeAll:" destination="mqt-S3-Xju" eventType="touchUpInside" id="ZOk-cS-gTG"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wt0-nr-oYJ">
+                        <rect key="frame" x="16" y="40" width="275" height="89"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ky7-zi-BVZ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="rbp-eu-eJE"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wn6-gY-azi" firstAttribute="top" secondItem="mqt-S3-Xju" secondAttribute="top" constant="8" id="3is-d5-3OA"/>
+                <constraint firstItem="Wt0-nr-oYJ" firstAttribute="top" secondItem="O5c-gl-L8y" secondAttribute="bottom" id="HIL-TC-lXt"/>
+                <constraint firstAttribute="trailing" secondItem="wn6-gY-azi" secondAttribute="trailing" constant="16" id="LkV-Bw-ynh"/>
+                <constraint firstItem="O5c-gl-L8y" firstAttribute="leading" secondItem="mqt-S3-Xju" secondAttribute="leading" constant="16" id="OOk-eP-BWx"/>
+                <constraint firstItem="O5c-gl-L8y" firstAttribute="top" secondItem="mqt-S3-Xju" secondAttribute="top" constant="8" id="bek-dB-VJj"/>
+                <constraint firstAttribute="trailing" secondItem="Wt0-nr-oYJ" secondAttribute="trailing" constant="16" id="fPW-gl-9gw"/>
+                <constraint firstAttribute="bottom" secondItem="Wt0-nr-oYJ" secondAttribute="bottom" constant="20" id="tRZ-MJ-nqy"/>
+                <constraint firstItem="Wt0-nr-oYJ" firstAttribute="leading" secondItem="mqt-S3-Xju" secondAttribute="leading" constant="16" id="wvV-c5-FCL"/>
+            </constraints>
+            <size key="customSize" width="307" height="149"/>
+            <connections>
+                <outlet property="collectionview" destination="Wt0-nr-oYJ" id="VFe-4T-5yS"/>
+            </connections>
+            <point key="canvasLocation" x="128.2608695652174" y="91.40625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

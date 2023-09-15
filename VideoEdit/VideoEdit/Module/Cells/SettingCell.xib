@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SettingCell" customModule="Movie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="79"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="79"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-r3-aWD">
+                        <rect key="frame" x="30" y="27.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="6EC-sX-Nip"/>
+                            <constraint firstAttribute="width" constant="24" id="Exa-rh-jN0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evu-gM-24c">
+                        <rect key="frame" x="71" y="29" width="274" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3In-TP-Wcf">
+                        <rect key="frame" x="362" y="24" width="49" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="VCi-I8-jId"/>
+                            <constraint firstAttribute="height" constant="31" id="bgg-iH-0IN"/>
+                        </constraints>
+                    </switch>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_setting_more" translatesAutoresizingMaskIntoConstraints="NO" id="P1A-6g-DzR">
+                        <rect key="frame" x="403" y="34.5" width="6" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="PGm-Iz-ItM"/>
+                            <constraint firstAttribute="width" constant="6" id="r5i-kn-Khd"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lOg-r3-aWD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="1Rq-M1-XlA"/>
+                <constraint firstItem="Evu-gM-24c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2Md-KI-CY8"/>
+                <constraint firstItem="P1A-6g-DzR" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="8ui-Zf-28x"/>
+                <constraint firstItem="Evu-gM-24c" firstAttribute="leading" secondItem="lOg-r3-aWD" secondAttribute="trailing" constant="17" id="LT5-ao-pcZ"/>
+                <constraint firstItem="3In-TP-Wcf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="N8N-Zt-vNc"/>
+                <constraint firstItem="lOg-r3-aWD" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="SyG-3l-7et"/>
+                <constraint firstAttribute="trailing" secondItem="P1A-6g-DzR" secondAttribute="trailing" constant="30" id="Xts-yA-71Q"/>
+                <constraint firstItem="3In-TP-Wcf" firstAttribute="leading" secondItem="Evu-gM-24c" secondAttribute="trailing" constant="17" id="oxL-I6-p1F"/>
+                <constraint firstAttribute="trailing" secondItem="3In-TP-Wcf" secondAttribute="trailing" constant="30" id="rHS-zE-pHN"/>
+            </constraints>
+            <size key="customSize" width="439" height="79"/>
+            <connections>
+                <outlet property="nameLabel" destination="Evu-gM-24c" id="3MA-Ro-Wof"/>
+                <outlet property="settingImage" destination="lOg-r3-aWD" id="Naq-40-lk1"/>
+                <outlet property="settingMore" destination="P1A-6g-DzR" id="ol4-qw-AKl"/>
+                <outlet property="settingSwitch" destination="3In-TP-Wcf" id="diZ-Pg-Qbc"/>
+            </connections>
+            <point key="canvasLocation" x="413.768115942029" y="87.388392857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_setting_more" width="7" height="11"/>
+    </resources>
+</document>

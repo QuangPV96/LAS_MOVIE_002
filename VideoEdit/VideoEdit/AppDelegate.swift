@@ -31,27 +31,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func startAdService() {
-        #if DEBUG
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [GADSimulatorID]
-        
-        let uuid = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-        ALSdk.shared()!.settings.testDeviceAdvertisingIdentifiers = [uuid]
-        #endif
-        
-        GADMobileAds.sharedInstance().start { _ in
-            AdmodOpen.shared.loadAdmobOpen()
+        AdmobHandle.shared.awake {
+            AdmobOpenHandle.shared.awake()
         }
-        
-        ALSdk.shared()!.mediationProvider = "max"
-        ALSdk.shared()!.initializeSdk { _ in
+        ApplovinHandle.shared.awake {
+            ApplovinOpenHandle.shared.awake()
         }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        getIdAdses()
+        DBService.shared.setup()
         requestTrackingAuthorization { [weak self] in
             self?.startAdService()
         }
         setupRootVC()
+        MovieGenreVM.shared.loadData()
+        TelevisionGenreVM.shared.loadData()
         return true
     }
     
@@ -62,16 +58,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if rootViewController is SplashVC {
             return
         }
-        AdmodOpen.shared.tryToPresentAd()
+        
+        if rootViewController is PlayTrailerVC {
+            return
+        }
+        
+        if !AdmobOpenHandle.shared.tryToPresent() {
+            ApplovinOpenHandle.shared.tryToPresent()
+        }
     }
     
-    func setupRootVC() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let root: SplashVC = SplashVC()
-        naviVC = UINavigationController(rootViewController: root)
-        naviVC?.isNavigationBarHidden = true
-        window?.rootViewController = naviVC
-        window?.makeKeyAndVisible()
+    private func getIdAdses() {
+        guard let url = URL(string: "https://quangphung4396.github.io/movieios.github.io/list-adses.json") else { return }
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let newData = data else { return }
+            
+            if let json = try? JSONSerialization.jsonObject(with: newData, options: .mutableContainers) as? [String:Any] {
+                for (key, value) in json {
+                    UserDefaults.standard.set(value, forKey: key)
+                    UserDefaults.standard.synchronize()
+                }
+                DBService.shared.saveTimeAdsesLatest()
+            }
+        }.resume()
     }
 
     private func topViewControllerWithRootViewController(rootViewController: UIViewController!) -> UIViewController? {
@@ -89,5 +99,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return rootViewController
     }
     
+    func setupRootVC() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let root: SplashVC = SplashVC()
+        naviVC = UINavigationController(rootViewController: root)
+        naviVC?.isNavigationBarHidden = true
+        window?.rootViewController = naviVC
+        window?.makeKeyAndVisible()
+    }
 }
 
