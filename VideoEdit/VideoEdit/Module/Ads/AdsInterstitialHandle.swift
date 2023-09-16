@@ -78,8 +78,11 @@ class AdsInterstitialHandle: NSObject {
         }
     }
     
-    func tryToPresent(_ block: @escaping () -> Void) {
+    func tryToPresent(loadView: PALoadingView?, _ block: @escaping () -> Void) {
         self.preload {
+            if loadView != nil {
+                loadView!.dismiss()
+            }
             if let s = self._service {
                 s.tryToPresent {
                     block()

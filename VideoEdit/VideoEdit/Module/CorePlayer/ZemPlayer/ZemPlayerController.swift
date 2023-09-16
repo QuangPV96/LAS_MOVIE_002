@@ -149,8 +149,7 @@ open class ZemPlayerController: UIViewController {
         let interstitals: [String] = DataCommonModel.shared.extraFind("interstitals") ?? []
         if interstitals.firstIndex(of: "player_will_exit") != nil {
             self.loadView.show()
-            AdsInterstitialHandle.shared.tryToPresent {
-                self.loadView.dismiss()
+            AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
                 self.playerView.pause()
                 self.dismiss(animated: true)
             }

@@ -107,8 +107,7 @@ class BaseVC: UIViewController {
 extension BaseVC {
     func openDetail(_ movie: Movie) {
         self.loadView.show()
-        AdsInterstitialHandle.shared.tryToPresent {
-            self.loadView.dismiss()
+        AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -122,8 +121,7 @@ extension BaseVC {
 
     func openDetail(_ tele: Television) {
         self.loadView.show()
-        AdsInterstitialHandle.shared.tryToPresent {
-            self.loadView.dismiss()
+        AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -136,8 +134,7 @@ extension BaseVC {
 
     func openListActor() {
         self.loadView.show()
-        AdsInterstitialHandle.shared.tryToPresent {
-            self.loadView.dismiss()
+        AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -149,8 +146,7 @@ extension BaseVC {
 
     func openActorDetail(_ personID: Int) {
         self.loadView.show()
-        AdsInterstitialHandle.shared.tryToPresent {
-            self.loadView.dismiss()
+        AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -163,8 +159,7 @@ extension BaseVC {
 
     func openListMovieMore(type: ListType, data: [Any] ){
         self.loadView.show()
-        AdsInterstitialHandle.shared.tryToPresent {
-            self.loadView.dismiss()
+        AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }

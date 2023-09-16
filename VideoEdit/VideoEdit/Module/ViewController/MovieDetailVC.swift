@@ -88,8 +88,7 @@ class MovieDetailVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
             }
             
             self?.loadView.show()
-            AdsInterstitialHandle.shared.tryToPresent {
-                self?.loadView.dismiss()
+            AdsInterstitialHandle.shared.tryToPresent(loadView: self?.loadView) {
                 let player = ZemPlayerController.makeController()
                 player.type = .movie
                 player.name = detail.title
