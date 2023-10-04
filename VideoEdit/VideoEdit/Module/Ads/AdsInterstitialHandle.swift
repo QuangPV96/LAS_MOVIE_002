@@ -1,10 +1,3 @@
-//
-//  AdsInterstitialHandle.swift
-//  SwiftyAds
-//
-//  Created by MinhNH on 26/04/2023.
-//
-
 import UIKit
 
 class AdsInterstitialHandle: NSObject {
@@ -78,10 +71,10 @@ class AdsInterstitialHandle: NSObject {
         }
     }
     
-    func tryToPresent(loadView: PALoadingView?, _ block: @escaping () -> Void) {
+    func tryToPresent(loadView: PALoadingView, _ block: @escaping () -> Void) {
         self.preload {
             if loadView != nil {
-                loadView!.dismiss()
+                loadView.dismiss()
             }
             if let s = self._service {
                 s.tryToPresent {

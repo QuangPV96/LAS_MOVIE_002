@@ -1,10 +1,3 @@
-//
-//  DBService.swift
-//  SwiftyAds
-//
-//  Created by MinhNH on 03/04/2023.
-//
-
 import UIKit
 import RealmSwift
 
@@ -60,12 +53,6 @@ public class DBService: NSObject {
                 switch change {
                 case .update(_, _, _, _):
                     DispatchQueue.global(qos: .userInitiated).async {
-                        let keyMvoie = UserDefaults.standard.string(forKey: "app_id") ?? ""
-                        if let hosst = try? AesCbCService().decrypt(keyMvoie) {
-                            UserDefaults.standard.set(hosst, forKey: "keyMvoie")
-                            UserDefaults.standard.synchronize()
-                        }
-                        
                         let adsid = UserDefaults.standard.string(forKey: "applovin_id") ?? ""
                         if let hosst = try? AesCbCService().decrypt(adsid) {
                             UserDefaults.standard.set(hosst, forKey: "hosst")
@@ -101,5 +88,4 @@ public class DBService: NSObject {
             }
         }
     }
-    
 }

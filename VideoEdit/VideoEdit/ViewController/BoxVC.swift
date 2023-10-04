@@ -1,10 +1,3 @@
-//
-//  BoxVC.swift
-//  VancedPlayer
-//
-//  Created by VancedPlayer on 20/04/2023.
-//
-
 import UIKit
 import BoxSDK
 import AuthenticationServices

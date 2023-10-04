@@ -1,10 +1,3 @@
-//
-//  ActivityEx.swift
-//  demo3
-//
-//  Created by apple on 20/09/2022.
-//
-
 import Foundation
 import UIKit
 class ActivityEx{

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  VideoEdit
-//
-//  Created by Trung Nguyễn on 07/08/2023.
-//
-
 import UIKit
 import AppLovinSDK
 import GoogleMobileAds
@@ -13,7 +6,6 @@ import AdSupport
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var naviVC: UINavigationController?
     var window: UIWindow?
 
@@ -38,17 +30,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ApplovinOpenHandle.shared.awake()
         }
     }
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         getIdAdses()
+        NetworksService.shared.checkChangeTime()
         DBService.shared.setup()
         requestTrackingAuthorization { [weak self] in
             self?.startAdService()
         }
         setupRootVC()
-        MovieGenreVM.shared.loadData()
-        TelevisionGenreVM.shared.loadData()
         return true
+    }
+
+    func setupRootVC() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let root: SplashVC = SplashVC()
+        naviVC = UINavigationController(rootViewController: root)
+        naviVC?.isNavigationBarHidden = true
+        window?.rootViewController = naviVC
+        window?.makeKeyAndVisible()
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -83,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }.resume()
     }
-
+    
     private func topViewControllerWithRootViewController(rootViewController: UIViewController!) -> UIViewController? {
         guard rootViewController != nil else { return nil }
         
@@ -99,13 +100,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return rootViewController
     }
     
-    func setupRootVC() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let root: SplashVC = SplashVC()
-        naviVC = UINavigationController(rootViewController: root)
-        naviVC?.isNavigationBarHidden = true
-        window?.rootViewController = naviVC
-        window?.makeKeyAndVisible()
-    }
 }
-

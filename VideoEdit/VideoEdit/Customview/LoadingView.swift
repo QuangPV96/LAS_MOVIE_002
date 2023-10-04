@@ -1,10 +1,3 @@
-//
-//  LoadingView.swift
-//  RingtoneWallpaper
-//
-//  Created by Trung Nguyễn on 13/07/2023.
-//
-
 import Foundation
 import UIKit
 import Lottie

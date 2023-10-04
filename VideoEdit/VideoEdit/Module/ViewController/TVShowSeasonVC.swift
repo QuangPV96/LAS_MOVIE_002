@@ -1,10 +1,3 @@
-//
-//  TVShowSeasonVC.swift
-//  DetizLoca
-//
-//  Created by Quynh Nguyen on 06/05/2022.
-//
-
 import UIKit
 
 class TVShowSeasonVC: BaseVC {

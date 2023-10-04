@@ -1,10 +1,3 @@
-//
-//  TelevisionDetailVM.swift
-//  LASAdvertising
-//
-//  Created by AD on 18/03/2022.
-//
-
 import UIKit
 
 class TVDetailVM: NSObject {

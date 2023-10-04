@@ -1,10 +1,3 @@
-//
-//  SettingVC.swift
-//  DetizLoca
-//
-//  Created by Tiger.K on 15/03/2022.
-//
-
 import UIKit
 
 class SettingRootVC: BaseVC, UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -41,19 +34,18 @@ class SettingRootVC: BaseVC, UICollectionViewDelegate,UICollectionViewDataSource
             case .rate:
                 UtilService.openRateApp()
             case .policy:
-                UtilService.openURL(URL(string: "https://forulapmedia.github.io/newcomtv/privacy.html")!, controller: self)
+                UtilService.openURL(URL(string: AppSetting.privacy)!, controller: self)
             case .feedback:
                 UtilService().writeEmail(controller: self)
             case .share:
-                let shareText = "Download now https://apps.apple.com/us/app/id1618177420";
-                let textToShare = [shareText] as [Any]
-                let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = self.view
-                self.present(activityViewController, animated: true, completion: nil)
+                guard let url = URL(string: "https://apps.apple.com/us/app/id\(AppSetting.id)") else { return }
+                let objectsToShare: [Any] = ["", url]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
             default:
                 break
             }
-            
         }
     }
     

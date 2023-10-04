@@ -54,7 +54,7 @@ class UtilService: NSObject {
     }
     
     func writeEmail(controller: UIViewController) {
-        let emailSupport = "forulapmedia@yahoo.com"
+        let emailSupport = AppSetting.email
         
         if MFMailComposeViewController.canSendMail() {
             let composeVC = MFMailComposeViewController()

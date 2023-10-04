@@ -1,10 +1,3 @@
-//
-//  PeopleCreditVM.swift
-//  DetizLoca
-//
-//  Created by Tiger.K on 18/03/2022.
-//
-
 import UIKit
 
 class PeopleCreditVM: BaseViewModel {

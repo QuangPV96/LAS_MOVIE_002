@@ -1,10 +1,3 @@
-//
-//  MainController.swift
-//  VideoEdit
-//
-//  Created by Trung Nguyễn on 07/08/2023.
-//
-
 import UIKit
 
 class MainController: UITabBarController, UITabBarControllerDelegate {

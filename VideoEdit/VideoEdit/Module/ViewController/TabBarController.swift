@@ -1,10 +1,3 @@
-//
-//  TabBarController.swift
-//  SwiftyAds
-//
-//  Created by MinhNH on 09/04/2023.
-//
-
 import UIKit
 import AVFoundation
 import StoreKit
@@ -13,6 +6,10 @@ class TabBarController: UITabBarController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
     override func viewDidLoad() {

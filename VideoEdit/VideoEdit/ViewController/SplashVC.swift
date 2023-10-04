@@ -1,23 +1,15 @@
-//
-//  SplashVC.swift
-//  VancedPlayer
-//
-//  Created by VancedPlayer on 08/05/2023.
-//
-
 import UIKit
 import Lottie
 import GoogleMobileAds
 import AppTrackingTransparency
 
-class SplashVC: UIViewController, GADFullScreenContentDelegate {
+class SplashVC: UIViewController, GADFullScreenContentDelegate  {
     
     @IBOutlet weak var viewLoading: UIView!
-    
+    private var splashAd: GADInterstitialAd?
     private let animationLoading = LottieAnimationView(name: "anim_loading")
     private var timer: Timer?
     private var timeLoading = 3
-    private var splashAd: GADInterstitialAd?
     
     private var isRequestedIDFA: Bool {
         if #available(iOS 14, *) {
@@ -32,7 +24,7 @@ class SplashVC: UIViewController, GADFullScreenContentDelegate {
         super.viewDidLoad()
         UserDefaults.standard.set(1, forKey: "splashing")
         UserDefaults.standard.synchronize()
-        
+         
         if let ss = UserDefaults.standard.string(forKey: "splash_mode"), ss == "admob" {
             self.timeLoading = 15
             self.fetchAd()
@@ -69,7 +61,6 @@ class SplashVC: UIViewController, GADFullScreenContentDelegate {
                 self.openTabView()
             }
         }
-//        qLuqG31hZJOh1H5BLMdJXwkID2cIFSd3NLJcHNr+CaJvb3xUSS8KZetX5DseDtLZ
     }
     
     private func presentAd() {
@@ -119,5 +110,4 @@ class SplashVC: UIViewController, GADFullScreenContentDelegate {
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         openTabView()
     }
-    
 }

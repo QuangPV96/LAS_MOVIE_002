@@ -1,10 +1,3 @@
-//
-//  MergeVC.swift
-//  VideoEdit
-//
-//  Created by apple on 08/08/2023.
-//
-
 import UIKit
 import AVFoundation
 

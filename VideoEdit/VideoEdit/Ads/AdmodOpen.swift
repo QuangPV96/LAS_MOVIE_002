@@ -38,7 +38,7 @@ class AdmodOpen: NSObject, GADFullScreenContentDelegate {
     // public
     func requestAppOpenAd() {
         self.appOpenAd = nil;
-        GADAppOpenAd.load(withAdUnitID: DataCommonModel.shared.admob_appopen, request: GADRequest(), orientation: .portrait) { (ad, error) in
+        GADAppOpenAd.load(withAdUnitID: admod_app_open, request: GADRequest(), orientation: .portrait) { (ad, error) in
             if ad != nil {
                 self.appOpenAd = ad
                 self.appOpenAd?.fullScreenContentDelegate = self

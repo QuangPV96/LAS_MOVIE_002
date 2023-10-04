@@ -1,10 +1,3 @@
-//
-//  CustomViewPopup.swift
-//  CDLTest
-//
-//  Created by Phung Van Quang on 05/10/2021.
-//
-
 import UIKit
 import SwiftMessages
 

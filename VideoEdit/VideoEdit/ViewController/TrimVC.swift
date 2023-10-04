@@ -1,10 +1,3 @@
-//
-//  PlayVC.swift
-//  LAS_SAMPLE_009
-//
-//  Created by Phung Van Quang on 22/05/2023.
-//
-
 import UIKit
 import MediaPlayer
 import AVKit

@@ -1,10 +1,3 @@
-//
-//  WaterMarkVC.swift
-//  VideoEdit
-//
-//  Created by apple on 10/08/2023.
-//
-
 import UIKit
 import AVFoundation
 

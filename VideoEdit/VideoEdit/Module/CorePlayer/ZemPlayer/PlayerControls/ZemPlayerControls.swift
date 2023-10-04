@@ -321,15 +321,20 @@ open class ZemPlayerControls: UIView {
     }
     
     /// End seeking
-    @IBAction open func seekingEnd(sender: Any? = nil) {
+    @IBAction func seekingEnd(sender: Any? = nil) {
         handler.isSeeking = false
+        let value = Double(seekbarSlider!.value)
+        let time = CMTime(seconds: value, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        handler.player.seek(to: time)
+        behaviour.update(with: time.seconds)
+        
         if wasPlayingBeforeSeeking {
             handler.play()
         }
     }
     
     /// Start Seeking
-    @IBAction open func seekingStart(sender: Any? = nil) {
+    @IBAction func seekingStart(sender: Any? = nil) {
         wasPlayingBeforeSeeking = handler.isPlaying
         handler.isSeeking = true
         handler.pause()
@@ -343,8 +348,7 @@ open class ZemPlayerControls: UIView {
         handler.isSeeking = true
         let value = Double(sender.value)
         let time = CMTime(seconds: value, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
-        handler.player.seek(to: time)
-        behaviour.update(with: time.seconds)
+        currentTimeLabel?.update(toTime: time.seconds)
     }
     
     /// Toggle fullscreen mode

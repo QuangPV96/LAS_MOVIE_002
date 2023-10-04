@@ -1,11 +1,3 @@
-//
-//  GADUnifiedNativeAdViewCustom.swift
-//  OnThiGPLX
-//
-//  Created by MacOne on 11/4/19.
-//  Copyright © 2019 Phung Quang. All rights reserved.
-//
-
 import UIKit
 import GoogleMobileAds
 

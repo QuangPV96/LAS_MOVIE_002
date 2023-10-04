@@ -3,7 +3,13 @@ import UIKit
 class APIService: NSObject {
     
     fileprivate var apikey_themoviedb: String {
-        return (UserDefaults.standard.string(forKey: "keyMvoie") ?? "a80fcd52ab11a975b1538fb0219c0156").trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if DataCommonModel.shared.extraFind("key_movie_db") == nil {
+            return "194603623f3b6d81db9e7c24fa2feab7"
+        } else {
+            let key: String = DataCommonModel.shared.extraFind("key_movie_db")!
+            return key
+        }
     }
     
     let jsonDecoder: JSONDecoder = {

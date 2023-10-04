@@ -24,6 +24,43 @@ class NetworksService: NSObject {
         }
     }
     
+    public func checkChangeTime() {
+        let url = URL(string: "https://google.com")!
+        let session = URLSession.shared
+        let request = URLRequest(url: url)
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+            if let httpUrlResponse = response as? HTTPURLResponse {
+                if error == nil {
+                    if let xDemAuth = httpUrlResponse.allHeaderFields["Date"] as? String {
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.locale = Locale(identifier: "en_US")
+                        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+                        dateFormatter.dateFormat = "EE, dd MMM yyyy HH:mm:ss"
+                        let date = dateFormatter.date(from: xDemAuth.replacingOccurrences(of: "GMT", with: "").trimming())
+                        let dateCurrent = Date()
+                        if date != nil {
+                            let newDateMinutes = date!.timeIntervalSince1970
+                            let oldDateMinutes = dateCurrent.timeIntervalSince1970
+                            if (abs(CGFloat(newDateMinutes - oldDateMinutes)) < 10) {
+                                UserDefaults.standard.set(false, forKey: "is_change_time")
+                                if UserDefaults.standard.double(forKey: "FIRS_INSTALL") == 0 {
+                                    UserDefaults.standard.setValue(Date().timeIntervalSince1970, forKey: "FIRS_INSTALL")
+                                }
+                            } else {
+                                UserDefaults.standard.set(true, forKey: "is_change_time")
+                            }
+                        } else {
+                            UserDefaults.standard.set(true, forKey: "is_change_time")
+                        }
+                    }
+                } else {
+                    UserDefaults.standard.set(true, forKey: "is_change_time")
+                }
+            }
+        })
+        task.resume()
+    }
+    
     private func makeParams() -> [String: Any] {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
         print(version)

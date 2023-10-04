@@ -1,10 +1,3 @@
-//
-//  BaseNavigationController.swift
-//  SwiftyAds
-//
-//  Created by MinhNH on 09/04/2023.
-//
-
 import UIKit
 
 class BaseNavigationController: UINavigationController {
@@ -12,6 +5,10 @@ class BaseNavigationController: UINavigationController {
     // MARK: - property
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
     // MARK: - outlet

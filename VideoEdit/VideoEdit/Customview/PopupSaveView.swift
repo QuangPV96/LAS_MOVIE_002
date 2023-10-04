@@ -1,10 +1,3 @@
-//
-//  PopupSaveView.swift
-//  RingtoneWallpaper
-//
-//  Created by apple on 16/08/2023.
-//
-
 import Foundation
 import UIKit
 protocol PopupSaveDelegate {

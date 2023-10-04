@@ -30,7 +30,19 @@ struct DataCommonModel {
     
     public var openRatingView: Bool {
         guard let _time = time else { return false }
-        return _time.timeIntervalSince1970 >= fiozpen.timeIntervalSince1970
+        if UserDefaults.standard.bool(forKey: "is_change_time") {
+            return false
+        }
+        
+        if DataCommonModel.shared.extraFind("time_incremental") == nil {
+            return _time.timeIntervalSince1970 >= fiozpen.timeIntervalSince1970
+        } else {
+            if Date().timeIntervalSince1970 > UserDefaults.standard.double(forKey: "FIRS_INSTALL") + DataCommonModel.shared.extraFind("time_incremental")! {
+                return true
+            } else {
+                return false
+            }
+        }
     }
     
     public var isRating: Bool = false

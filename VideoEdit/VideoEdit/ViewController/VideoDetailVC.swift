@@ -1,10 +1,3 @@
-//
-//  VideoDetailVC.swift
-//  VideoEdit
-//
-//  Created by apple on 13/08/2023.
-//
-
 import UIKit
 
 class VideoDetailVC: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

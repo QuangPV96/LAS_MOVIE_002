@@ -1,10 +1,3 @@
-//
-//  AesCbCService.swift
-//  Movie
-//
-//  Created by quang on 08/08/2023.
-//
-
 import CryptoSwift
 
 extension NSError {

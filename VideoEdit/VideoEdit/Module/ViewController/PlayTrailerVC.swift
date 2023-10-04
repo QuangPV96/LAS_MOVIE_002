@@ -1,10 +1,3 @@
-//
-//  PlayTrailerVC.swift
-//  LAS_001
-//
-//  Created by Tiger.K on 19/03/2022.
-//
-
 import UIKit
 import WebKit
 

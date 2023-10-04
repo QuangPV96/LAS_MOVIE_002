@@ -20,6 +20,10 @@ class BaseVC: UIViewController {
         return .lightContent
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     var nativeIndex: Int = 0
     var loadedNative: Bool = false
     
@@ -30,7 +34,6 @@ class BaseVC: UIViewController {
     var applovinAdView: MANativeAdView?
     
     let loadView = PALoadingView()
-    
     
     // MARK: - life cycle viewcontroller
     override func viewDidLoad() {
@@ -122,6 +125,7 @@ extension BaseVC {
     func openDetail(_ tele: Television) {
         self.loadView.show()
         AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
+            self.loadView.dismiss()
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -135,6 +139,7 @@ extension BaseVC {
     func openListActor() {
         self.loadView.show()
         AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
+            self.loadView.dismiss()
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -147,6 +152,7 @@ extension BaseVC {
     func openActorDetail(_ personID: Int) {
         self.loadView.show()
         AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
+            self.loadView.dismiss()
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }
@@ -160,6 +166,7 @@ extension BaseVC {
     func openListMovieMore(type: ListType, data: [Any] ){
         self.loadView.show()
         AdsInterstitialHandle.shared.tryToPresent(loadView: self.loadView) {
+            self.loadView.dismiss()
             guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
                 return
             }

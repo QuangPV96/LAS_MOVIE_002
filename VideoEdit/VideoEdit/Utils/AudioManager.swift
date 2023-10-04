@@ -1,11 +1,3 @@
-//
-//  AudioEngine.swift
-//  EqualizerEffect
-//
-//  Created by 한승진 on 2018. 3. 12..
-//  Copyright © 2018년 한승진. All rights reserved.
-//
-
 import Foundation
 import AVFoundation
 import CoreAudio

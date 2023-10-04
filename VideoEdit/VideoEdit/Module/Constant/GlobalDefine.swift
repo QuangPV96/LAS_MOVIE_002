@@ -1,6 +1,14 @@
 import Foundation
 import UIKit
 
+struct AppSetting {
+    static let id = ""
+    static let email = "anvippro3001@gmail.com"
+    static let homepage = "https://qobajtololom.github.io"
+    static let privacy = "https://qobajtololom.github.io/privacy.html"
+    static let moreapp = ""
+}
+
 let prefix_host_image = "https://image.tmdb.org/t/p/w500"
 let prefix_host_themoviedb = "https://api.themoviedb.org/3/"
 let prefixSrcImage = "data:image/jpeg;"

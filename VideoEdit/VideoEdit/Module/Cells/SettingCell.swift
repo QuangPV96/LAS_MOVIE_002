@@ -23,9 +23,9 @@ enum SettingType: String {
     func imageName() -> String {
         switch self {
         case .notification: return "ic_notification"
-        case .policy: return "ic_policy"
-        case .feedback: return "ic_feedback"
-        case .share: return "ic_share"
+        case .policy: return "ic_policy_root"
+        case .feedback: return "ic_feedback_root"
+        case .share: return "ic_share_root"
         case .rate: return "ic_star_toprated"
         }
     }

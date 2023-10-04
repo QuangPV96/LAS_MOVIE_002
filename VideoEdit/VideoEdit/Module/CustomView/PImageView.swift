@@ -56,10 +56,3 @@ class PImageView: UIImageView {
         }
     }
 }
-
-
-
-
-
-
-

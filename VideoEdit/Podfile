@@ -6,24 +6,24 @@ target 'VideoEdit' do
   use_frameworks!
 
   # Pods for VideoEdit
-pod 'BetterSegmentedControl', '~> 2.0'
-pod 'SwiftMessages'
-pod 'mobile-ffmpeg-full-gpl', '~> 4.2'
-pod 'lottie-ios'
-pod 'BoxSDK'
+  pod 'BetterSegmentedControl', '~> 2.0'
+  pod 'SwiftMessages'
+  pod 'mobile-ffmpeg-full-gpl', '~> 4.2'
+  pod 'lottie-ios'
+  pod 'BoxSDK'
 
-pod 'SDWebImage'
-pod 'SwiftSoup'
-pod 'CryptoSwift'
-pod 'Zip'
-pod 'RealmSwift'
+  pod 'SDWebImage'
+  pod 'SwiftSoup'
+  pod 'CryptoSwift'
+  pod 'Zip'
+  pod 'RealmSwift'
 
-pod 'AppLovinSDK'
-pod 'AppLovinMediationAdColonyAdapter'
-pod 'AppLovinMediationGoogleAdapter'
-pod 'AppLovinMediationIronSourceAdapter'
-pod 'AppLovinMediationVungleAdapter'
-pod 'AppLovinMediationUnityAdsAdapter'
+  pod 'AppLovinSDK'
+  pod 'AppLovinMediationAdColonyAdapter'
+  pod 'AppLovinMediationGoogleAdapter'
+  pod 'AppLovinMediationIronSourceAdapter'
+  pod 'AppLovinMediationVungleAdapter'
+  pod 'AppLovinMediationUnityAdsAdapter'
 
 end
 

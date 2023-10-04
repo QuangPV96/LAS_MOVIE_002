@@ -1,15 +1,11 @@
-//
-//  SceneDelegate.swift
-//  VideoEdit
-//
-//  Created by Trung Nguyễn on 07/08/2023.
-//
-
 import UIKit
 
+@available(iOS 13.0, *)
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    var window: UIWindow?
+    
     var naviVC: UINavigationController?
+    var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -53,5 +49,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         return rootViewController
     }
+    
 }
 

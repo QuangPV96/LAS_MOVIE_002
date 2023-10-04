@@ -1,10 +1,3 @@
-//
-//  Constants.swift
-//  RingtoneWallpaper
-//
-//  Created by Trung Nguyễn on 12/07/2023.
-//
-
 import Foundation
 import UIKit
 import AVFoundation

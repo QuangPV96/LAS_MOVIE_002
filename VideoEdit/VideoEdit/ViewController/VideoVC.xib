@@ -41,7 +41,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-Da-ZSF" customClass="PView" customModule="VideoEdit" customModuleProvider="target">
                             <rect key="frame" x="17" y="8" width="186" height="46"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8Y-f4-W1n" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8Y-f4-W1n" customClass="BetterSegmentedControl">
                                     <rect key="frame" x="3" y="3" width="180" height="40"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -61,7 +61,6 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                     <real key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
@@ -167,7 +166,6 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="12"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundConner" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
@@ -228,11 +226,6 @@
             <point key="canvasLocation" x="19" y="20"/>
         </view>
     </objects>
-    <designables>
-        <designable name="k8Y-f4-W1n">
-            <size key="intrinsicContentSize" width="195" height="32"/>
-        </designable>
-    </designables>
     <resources>
         <image name="ic_background" width="1572" height="3408"/>
         <image name="ic_empty" width="561" height="558"/>

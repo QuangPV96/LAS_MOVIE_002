@@ -27,19 +27,20 @@ class SwiftMessagesHelper: NSObject {
  
     @objc func tr() {
         DataCommonModel.shared.readData()
-        
         AdmobOpenHandle.shared.preloadAdIfNeed()
         ApplovinOpenHandle.shared.preloadAdIfNeed()
         
         NetworksService.shared.checkNetwork { [unowned self] connection in
             if self.i == 1 && self.splashing == 0 {
-                self.pz()   // ensure =>
+                self.pz()
             }
         }
     }
     
     @objc func pz() {
         if DataCommonModel.shared.openRatingView {
+            MovieGenreVM.shared.loadData()
+            TelevisionGenreVM.shared.loadData()
             i = 2
             let naviSeen = BaseNavigationController(rootViewController: TabBarController())
             UIWindow.keyWindow?.rootViewController = naviSeen
@@ -48,5 +49,4 @@ class SwiftMessagesHelper: NSObject {
         i = 1
         NotificationCenter.default.post(name: NSNotification.Name("ct"), object: nil)
     }
-    
 }
