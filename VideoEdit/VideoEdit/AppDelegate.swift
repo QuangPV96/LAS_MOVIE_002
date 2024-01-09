@@ -1,43 +1,17 @@
 import UIKit
-import AppLovinSDK
-import GoogleMobileAds
-import AppTrackingTransparency
-import AdSupport
+import Countly
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var naviVC: UINavigationController?
     var window: UIWindow?
 
-    private func requestTrackingAuthorization(completion: @escaping () -> Void) {
-        if #available(iOS 14, *) {
-            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main, using: { _ in
-                ATTrackingManager.requestTrackingAuthorization { _ in
-                    DispatchQueue.main.async { completion() }
-                }
-            })
-        }
-        else {
-            completion()
-        }
-    }
-    
-    private func startAdService() {
-        AdmobHandle.shared.awake {
-            AdmobOpenHandle.shared.awake()
-        }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        initCountly()
+        getIdAdses()
+        DBService.shared.setup()
         ApplovinHandle.shared.awake {
             ApplovinOpenHandle.shared.awake()
-        }
-    }
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        getIdAdses()
-        NetworksService.shared.checkChangeTime()
-        DBService.shared.setup()
-        requestTrackingAuthorization { [weak self] in
-            self?.startAdService()
         }
         setupRootVC()
         return true
@@ -50,6 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         naviVC?.isNavigationBarHidden = true
         window?.rootViewController = naviVC
         window?.makeKeyAndVisible()
+    }
+    
+    func initCountly(){
+        let config: CountlyConfig = CountlyConfig()
+        config.appKey = AppSetting.appKey
+        config.secretSalt = AppSetting.secretSalt
+        config.host = AppSetting.checkingLink
+        config.features = [.pushNotifications, .crashReporting]
+        config.enableAutomaticViewTracking = true
+        config.deviceID = AppSetting.getIDDevice()
+#if DEBUG
+        config.enableDebug = true
+#endif
+        Countly.sharedInstance().start(with: config)
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -70,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func getIdAdses() {
-        guard let url = URL(string: "https://quangphung4396.github.io/movieios.github.io/list-adses.json") else { return }
+        guard let url = URL(string: AppSetting.list_ads) else { return }
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let newData = data else { return }
@@ -101,3 +89,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+

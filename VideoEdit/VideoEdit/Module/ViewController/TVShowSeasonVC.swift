@@ -1,4 +1,5 @@
 import UIKit
+import Countly
 
 class TVShowSeasonVC: BaseVC {
     // MARK: - properties
@@ -136,6 +137,8 @@ extension TVShowSeasonVC: UITableViewDelegate, UITableViewDataSource {
                                                year: 0,
                                                imdb: imdb,
                                                content: emptylink)
+                    let event = ["link_tvshow" : "\(name) - \(ss) - \(epi)"]
+                    Countly.sharedInstance().recordEvent("link_tvshow_failed", segmentation:event)
                 }
             
                 return

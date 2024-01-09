@@ -19,7 +19,7 @@ class AdmodSplash: NSObject {
     }
     
     private func createAndLoadInterstitial() {
-        GADInterstitialAd.load(withAdUnitID:admod_interstital_splash,
+        GADInterstitialAd.load(withAdUnitID: DataCommonModel.shared.admob_inter_splash,
                                request: GADRequest(),
                                completionHandler: { [self] ad, error in
                                 if let error = error {

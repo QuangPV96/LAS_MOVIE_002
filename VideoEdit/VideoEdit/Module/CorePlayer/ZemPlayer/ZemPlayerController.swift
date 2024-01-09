@@ -1,12 +1,6 @@
-//
-//  ZemPlayerController.swift
-//  VideoPlayer
-//
-//  Created by Quynh Nguyen on 10/06/2022.
-//
-
 import UIKit
 import AVFoundation
+import Countly
 
 open class ZemPlayerController: UIViewController {
     
@@ -93,6 +87,10 @@ open class ZemPlayerController: UIViewController {
             playerView.set(item: item)
             
             SubtitleService.shared.vSubtitles = s.tracks
+            
+            let seg = ["link": url.absoluteString,
+                       "name": controls.titleLabel?.text ?? ""]
+            Countly.sharedInstance().endEvent("playback", segmentation: seg, count: 1, sum: 0)
         }
     }
     

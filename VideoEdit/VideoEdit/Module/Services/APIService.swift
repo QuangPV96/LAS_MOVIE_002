@@ -5,7 +5,7 @@ class APIService: NSObject {
     fileprivate var apikey_themoviedb: String {
         
         if DataCommonModel.shared.extraFind("key_movie_db") == nil {
-            return "194603623f3b6d81db9e7c24fa2feab7"
+            return AppSetting.key_movie_db
         } else {
             let key: String = DataCommonModel.shared.extraFind("key_movie_db")!
             return key

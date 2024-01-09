@@ -1,4 +1,5 @@
 import UIKit
+import Countly
 
 class MovieDetailVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     
@@ -78,6 +79,8 @@ class MovieDetailVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         NetworkHelper.shared.loadM(detail.title, year: detail.yearInt, imdb: detail.imdb) { [weak self] data in
             if data.count == 0 {
                 self?.alertNotLink {
+                    let event = ["link_movie" : "\(detail.title) - \(detail.yearInt) - \(detail.imdb)"]
+                    Countly.sharedInstance().recordEvent("link_movie_failed", segmentation:event)
                     NetworkHelper.shared.rport(name: detail.title,
                                                type: MediaType.movie.rawValue,
                                                year: detail.yearInt,

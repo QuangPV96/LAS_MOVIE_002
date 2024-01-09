@@ -1,6 +1,10 @@
 import UIKit
 import GoogleMobileAds
 
+extension NSNotification.Name {
+    static let admob_ready = NSNotification.Name(rawValue: "admob_ready")
+}
+
 public class AdmobHandle: NSObject {
     
     // MARK: - properties
@@ -30,6 +34,7 @@ public class AdmobHandle: NSObject {
         GADMobileAds.sharedInstance().start { _ in
             self._isReady = true
             completion()
+            NotificationCenter.default.post(name: .admob_ready, object: nil)
         }
     }
 }

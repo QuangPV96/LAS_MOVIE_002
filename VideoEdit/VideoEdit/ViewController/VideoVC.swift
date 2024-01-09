@@ -38,7 +38,7 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
         controlTab()
         permissonCheck()
         
-        adLoader = GADAdLoader(adUnitID: admod_small_native, rootViewController: self,
+        adLoader = GADAdLoader(adUnitID: "ca-app-pub-3940256099942544/3986624511", rootViewController: self,
                                adTypes: [ .native ], options: nil)
         adLoader!.delegate = self
         adLoader!.load(GADRequest())
@@ -282,18 +282,21 @@ class VideoVC: BaseViewController,UICollectionViewDelegate, UICollectionViewData
 
 extension VideoVC : GADNativeAdLoaderDelegate, GADAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+        print(error)
     }
     
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        guard let nibObjects = Bundle.main.loadNibNamed("NativeSmallAdView", owner: nil, options: nil),
-            let adView = nibObjects.first as? NativeSmallAdView else {
-                assert(false, "Could not load nib file for adView")
-                return
+        if listVideo.count > 0 {
+            guard let nibObjects = Bundle.main.loadNibNamed("NativeSmallAdView", owner: nil, options: nil),
+                let adView = nibObjects.first as? NativeSmallAdView else {
+                    assert(false, "Could not load nib file for adView")
+                    return
+            }
+            
+            setAdView(adView)
+            
+            self.nativeAd = nativeAd
+            nativeAdView.setViewForAds(nativeAd: self.nativeAd!)
         }
-        
-        setAdView(adView)
-        
-        self.nativeAd = nativeAd
-        nativeAdView.setViewForAds(nativeAd: self.nativeAd!)
     }
 }

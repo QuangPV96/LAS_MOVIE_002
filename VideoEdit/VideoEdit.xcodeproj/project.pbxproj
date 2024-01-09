@@ -297,12 +297,14 @@
 		74181BE32ACD61E400267770 /* UtilService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74181B032ACD61E300267770 /* UtilService.swift */; };
 		7495D0D42AAF4F9F0095A7DF /* AdmodOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D0D12AAF4F9F0095A7DF /* AdmodOpen.swift */; };
 		7495D0D62AAF4F9F0095A7DF /* AdmodSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D0D32AAF4F9F0095A7DF /* AdmodSplash.swift */; };
+		74FF2B4B2B4CF3750010EB48 /* AniKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FF2B4A2B4CF3750010EB48 /* AniKeychain.swift */; };
 		8FB49E4D2AA771A500F9D543 /* VideoTrimmerThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4B2AA771A500F9D543 /* VideoTrimmerThumb.swift */; };
 		8FB49E4E2AA771A500F9D543 /* VideoTrimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4C2AA771A500F9D543 /* VideoTrimmer.swift */; };
 		8FB49E502AA771B700F9D543 /* OptiVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E4F2AA771B700F9D543 /* OptiVideoEditor.swift */; };
 		8FB49E532AA771C300F9D543 /* TrimVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB49E512AA771C300F9D543 /* TrimVC.swift */; };
 		8FB49E542AA771C300F9D543 /* TrimVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB49E522AA771C300F9D543 /* TrimVC.xib */; };
 		8FF10AC72A98390C00D5F913 /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF10AC62A98390C00D5F913 /* EmailService.swift */; };
+		8FFF0D632B27646800385423 /* IdfaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFF0D622B27646800385423 /* IdfaService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -600,12 +602,14 @@
 		74181B032ACD61E300267770 /* UtilService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilService.swift; sourceTree = "<group>"; };
 		7495D0D12AAF4F9F0095A7DF /* AdmodOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmodOpen.swift; sourceTree = "<group>"; };
 		7495D0D32AAF4F9F0095A7DF /* AdmodSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmodSplash.swift; sourceTree = "<group>"; };
+		74FF2B4A2B4CF3750010EB48 /* AniKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniKeychain.swift; sourceTree = "<group>"; };
 		8FB49E4B2AA771A500F9D543 /* VideoTrimmerThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmerThumb.swift; sourceTree = "<group>"; };
 		8FB49E4C2AA771A500F9D543 /* VideoTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTrimmer.swift; sourceTree = "<group>"; };
 		8FB49E4F2AA771B700F9D543 /* OptiVideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptiVideoEditor.swift; sourceTree = "<group>"; };
 		8FB49E512AA771C300F9D543 /* TrimVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimVC.swift; sourceTree = "<group>"; };
 		8FB49E522AA771C300F9D543 /* TrimVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrimVC.xib; sourceTree = "<group>"; };
 		8FF10AC62A98390C00D5F913 /* EmailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
+		8FFF0D622B27646800385423 /* IdfaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdfaService.swift; sourceTree = "<group>"; };
 		C8698E9AA18B9DD22226C356 /* Pods-VideoEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoEdit.release.xcconfig"; path = "Target Support Files/Pods-VideoEdit/Pods-VideoEdit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1235,6 +1239,7 @@
 		74181ACE2ACD61E300267770 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				74FF2B4A2B4CF3750010EB48 /* AniKeychain.swift */,
 				74181ACF2ACD61E300267770 /* SwiftMessagesHelper.swift */,
 				74181AD02ACD61E300267770 /* GlobalExtension.swift */,
 				74181AD12ACD61E300267770 /* GlobalDefine.swift */,
@@ -1314,6 +1319,7 @@
 				74181B012ACD61E300267770 /* DBService.swift */,
 				74181B022ACD61E300267770 /* TVShowAPIService.swift */,
 				74181B032ACD61E300267770 /* UtilService.swift */,
+				8FFF0D622B27646800385423 /* IdfaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1639,6 +1645,7 @@
 				74181B492ACD61E300267770 /* SearchMovieCell.swift in Sources */,
 				74181B142ACD61E300267770 /* BaseInterstitial.swift in Sources */,
 				74181B5B2ACD61E300267770 /* DetailScenesCell.swift in Sources */,
+				8FFF0D632B27646800385423 /* IdfaService.swift in Sources */,
 				74181B3B2ACD61E300267770 /* SearchActorCell.swift in Sources */,
 				74181BAC2ACD61E300267770 /* ActingHistory.swift in Sources */,
 				74181BB02ACD61E300267770 /* LocalStorage.swift in Sources */,
@@ -1714,6 +1721,7 @@
 				74181B252ACD61E300267770 /* TelevisionRecommendationVM.swift in Sources */,
 				74181B812ACD61E300267770 /* Utils.swift in Sources */,
 				18BB18382A8236A900D4E83C /* MergeVC.swift in Sources */,
+				74FF2B4B2B4CF3750010EB48 /* AniKeychain.swift in Sources */,
 				74181B482ACD61E300267770 /* PagerHomeCell.swift in Sources */,
 				74181B4E2ACD61E300267770 /* ItemWithIndexCell.swift in Sources */,
 				74181BD92ACD61E400267770 /* TabBarController.swift in Sources */,
@@ -1900,10 +1908,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z72A4K47PZ;
+				DEVELOPMENT_TEAM = 8CUZ7H4DNZ;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoEdit/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SFlic;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dozer Video";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Access to get video for you to use the app";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library Access to get video for you to use the app";
@@ -1917,8 +1927,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor;
+				MARKETING_VERSION = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1934,10 +1945,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z72A4K47PZ;
+				DEVELOPMENT_TEAM = 8CUZ7H4DNZ;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoEdit/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SFlic;
+				INFOPLIST_KEY_CFBundleDisplayName = "Dozer Video";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Access to get video for you to use the app";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library Access to get video for you to use the app";
@@ -1951,8 +1963,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor;
+				MARKETING_VERSION = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.player.video.editor1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

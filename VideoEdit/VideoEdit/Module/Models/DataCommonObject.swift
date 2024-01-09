@@ -1,15 +1,8 @@
 import Foundation
 
 struct DataCommonModel {
-    private let key = "fizfiozpen"
-    
-    fileprivate var fiozpen: Date {
-        if UserDefaults.standard.object(forKey: key) as? Date == nil {
-            UserDefaults.standard.set(Date(), forKey: key)
-            UserDefaults.standard.synchronize()
-        }
-        return UserDefaults.standard.object(forKey: key) as! Date
-    }
+    static let fizkey = "fizaafiozpen"
+    static let timekey = "timezchanged"
     
     fileprivate var time: Date?
     fileprivate var extra: String? {
@@ -29,19 +22,22 @@ struct DataCommonModel {
     }
     
     public var openRatingView: Bool {
-        guard let _time = time else { return false }
-        if UserDefaults.standard.bool(forKey: "is_change_time") {
+        guard let _time = time,
+              let _fiozpen = UserDefaults.standard.object(forKey: Self.fizkey) as? Date
+        else {
             return false
         }
         
-        if DataCommonModel.shared.extraFind("time_incremental") == nil {
-            return _time.timeIntervalSince1970 >= fiozpen.timeIntervalSince1970
-        } else {
-            if Date().timeIntervalSince1970 > UserDefaults.standard.double(forKey: "FIRS_INSTALL") + DataCommonModel.shared.extraFind("time_incremental")! {
-                return true
-            } else {
-                return false
-            }
+        if UserDefaults.standard.bool(forKey: Self.timekey) {
+            return false
+        }
+        
+        let xTime: Int? = self.extraFind("in_time")
+        if let _xTime = xTime {
+            return Date().timeIntervalSince1970 >= _fiozpen.timeIntervalSince1970 + TimeInterval(_xTime)
+        }
+        else {
+            return _time.timeIntervalSince1970 >= _fiozpen.timeIntervalSince1970
         }
     }
     
@@ -49,10 +45,6 @@ struct DataCommonModel {
     
     // MARK: - static instance
     public static var shared = DataCommonModel()
-    
-    init() {
-        let _ = fiozpen
-    }
     
     // MARK: - keys admob
     @LocalStorage(key: "admob_banner", value: "ca-app-pub-2299291161271404/8272939431")

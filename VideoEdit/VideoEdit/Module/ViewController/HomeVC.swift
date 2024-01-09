@@ -1,4 +1,5 @@
 import UIKit
+import StoreKit
 
 class HomeVC: BaseVC, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
 
@@ -54,8 +55,66 @@ class HomeVC: BaseVC, UICollectionViewDataSource, UICollectionViewDelegate, UICo
         
         popularPeopleVM.bindViewModelToController = {
             self.collectionView.reloadData()
+            self.moreAppOrRateApp()
         }
         popularPeopleVM.loadData()
+    }
+    
+    private func moreAppOrRateApp(){
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .notDetermined {
+                let moreApp: DDictionary? = DataCommonModel.shared.extraFind("more_app")
+                if moreApp != nil {
+                    let appid = moreApp!["appid"] as? String
+                    let message = moreApp!["message"] as? String
+                    if appid != nil && message != nil {
+                        self.presentAlertInstall(appid: appid!, message: message!)
+                    } else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+                            self?.presentRatePopup()
+                        })
+                    }
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+                        self?.presentRatePopup()
+                    })
+                }
+            } else {
+                ApplicationHelper.shared.requestAuthorization { _ in
+                    ApplicationHelper.shared.addScheduleEveryday(title: AppSetting.titleNoti, body: AppSetting.contentNoti, hour: 21, minute: 00)
+                }
+            }
+        }
+    }
+    
+    private func presentRatePopup() {
+        if !DataCommonModel.shared.isRating {
+            return
+        }
+        if #available(iOS 13.0, *) {
+            if let windowScene = UIApplication.shared.windows.first?.windowScene {
+                if #available(iOS 14.0, *) {
+                    SKStoreReviewController.requestReview(in: windowScene)
+                } else {
+                    SKStoreReviewController.requestReview()
+                }
+            } else {
+                SKStoreReviewController.requestReview()
+            }
+        } else {
+            SKStoreReviewController.requestReview()
+        }
+    }
+    
+    private func presentAlertInstall(appid: String, message: String) {
+        let alert = UIAlertController(title: "More App For You", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            if let url = URL(string: "https://itunes.apple.com/app/id\(appid)") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

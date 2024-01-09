@@ -25,47 +25,6 @@ let Holidays = "Holidays"
 public let NAME_FILE_SAVE = "list_song_local.json"
 public let NAME_FILE_EDIT_SAVE = "list_song_edit_local.json"
 
-#if DEBUG
-    public let admod_banner = "ca-app-pub-3940256099942544/2934735716"
-    public let admod_interstital = "ca-app-pub-3940256099942544/4411468910"
-    public let admod_interstital_splash = "ca-app-pub-3940256099942544/4411468910"
-    public let admod_reward = ""
-    public let admod_reward_interstital = ""
-    public let admod_small_native = "ca-app-pub-3940256099942544/3986624511"
-    public let admod_medium_native = "ca-app-pub-3940256099942544/3986624511"
-    public let admod_manual_native = "ca-app-pub-3940256099942544/3986624511"
-    public let admod_app_open = "ca-app-pub-3940256099942544/3419835294"
-
-    public let max_banner = ""
-    public let max_interstital = ""
-    public let max_splash = ""
-    public let max_reward = ""
-    public let max_small_native = ""
-    public let max_medium_native = ""
-    public let max_manual_native = ""
-    public let max_app_open = ""
-#else
-    public let admod_banner = "ca-app-pub-2299291161271404/8272939431"
-    public let admod_interstital = "ca-app-pub-2299291161271404/2214512133"
-    public let admod_interstital_splash = "ca-app-pub-2299291161271404/9398318841"
-    public let admod_reward = "ca-app-pub-2299291161271404/5192029261"
-    public let admod_reward_interstital = "ca-app-pub-2299291161271404/6959857763"
-    public let admod_small_native = "ca-app-pub-2299291161271404/9060203653"
-    public let admod_medium_native = "ca-app-pub-2299291161271404/5646776094"
-    public let admod_manual_native = "ca-app-pub-2299291161271404/5781387903"
-    public let admod_app_open = "ca-app-pub-2299291161271404/1975920555"
-
-    public let max_banner = "cfdbab700207037d"
-    public let max_interstital = "f1e02fbbb4a8f5e1"
-    public let max_splash = "398eb768f34ae103"
-    public let max_reward = "1a327f075529f885"
-    public let max_small_native = "12bab982eaa84646"
-    public let max_medium_native = "9be43f9dca78a291"
-    public let max_manual_native = "1dd70b411dd4798f"
-    public let max_app_open = "35fa72c23c26a56e"
-#endif
-
-
 func isPad() -> Bool {
     return UIDevice.current.userInterfaceIdiom == .pad
 }

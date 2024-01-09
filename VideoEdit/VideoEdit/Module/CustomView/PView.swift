@@ -54,10 +54,3 @@ class PView: UIView {
         }
     }
 }
-
-
-
-
-
-
-

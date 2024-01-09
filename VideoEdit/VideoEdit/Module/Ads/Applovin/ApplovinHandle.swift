@@ -2,6 +2,10 @@ import UIKit
 import AppLovinSDK
 import AdSupport
 
+extension NSNotification.Name {
+    static let applovin_ready = NSNotification.Name(rawValue: "applovin_ready")
+}
+
 public class ApplovinHandle: NSObject {
     
     // MARK: - properties
@@ -25,6 +29,7 @@ public class ApplovinHandle: NSObject {
         ALSdk.shared()!.initializeSdk { (configuration: ALSdkConfiguration) in
             self._isReady = true
             completion()
+            NotificationCenter.default.post(name: .applovin_ready, object: nil)
         }
     }
 }

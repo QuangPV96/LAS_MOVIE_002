@@ -29,10 +29,11 @@ class SwiftMessagesHelper: NSObject {
         DataCommonModel.shared.readData()
         AdmobOpenHandle.shared.preloadAdIfNeed()
         ApplovinOpenHandle.shared.preloadAdIfNeed()
-        
-        NetworksService.shared.checkNetwork { [unowned self] connection in
-            if self.i == 1 && self.splashing == 0 {
-                self.pz()
+        NetworksService.shared.updateTime {
+            NetworksService.shared.checkNetwork { [unowned self] connection in
+                if self.i == 1 && self.splashing == 0 {
+                    self.pz()
+                }
             }
         }
     }

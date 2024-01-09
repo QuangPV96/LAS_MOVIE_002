@@ -17,6 +17,7 @@ target 'VideoEdit' do
   pod 'CryptoSwift'
   pod 'Zip'
   pod 'RealmSwift'
+  pod 'Countly'
 
   pod 'AppLovinSDK'
   pod 'AppLovinMediationAdColonyAdapter'
@@ -35,4 +36,9 @@ post_install do |installer|
       end
     end
   end
+  
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
+  
 end

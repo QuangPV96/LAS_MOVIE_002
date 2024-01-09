@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchVC" customModule="Movie" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchVC" customModule="Tenzena" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="Jh1-35-aNX" id="kJt-mv-2wZ"/>
                 <outlet property="searchCollectionView" destination="15U-d7-Kyw" id="UkC-1n-guK"/>
@@ -54,7 +54,7 @@
                         <constraint firstAttribute="trailing" secondItem="H1i-us-1zt" secondAttribute="trailing" constant="56" id="t27-CW-Vi5"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spe-4F-3Xb" customClass="PView" customModule="Movie" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spe-4F-3Xb" customClass="PView" customModule="Tenzena" customModuleProvider="target">
                     <rect key="frame" x="16" y="104" width="382" height="38"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="BAM-jI-hwZ">
@@ -92,7 +92,7 @@
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="15U-d7-Kyw">
                             <rect key="frame" x="0.0" y="20" width="414" height="714"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jCc-Us-qZC">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -109,7 +109,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="15U-d7-Kyw" firstAttribute="leading" secondItem="Jh1-35-aNX" secondAttribute="leading" id="4Lq-Ky-6kw"/>
                         <constraint firstItem="cOx-iU-8Xu" firstAttribute="centerY" secondItem="Jh1-35-aNX" secondAttribute="centerY" id="Gg5-us-0dK"/>
@@ -143,7 +143,7 @@
     </objects>
     <resources>
         <image name="ic_bg" width="589.5" height="1278"/>
-        <image name="ic_search" width="13.333333015441895" height="13.333333015441895"/>
+        <image name="ic_search" width="80" height="80"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
